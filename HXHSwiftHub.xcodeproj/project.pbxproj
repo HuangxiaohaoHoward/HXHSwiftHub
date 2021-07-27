@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */; };
+		77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */; };
 		77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A50B4126AE554F006F6E2D /* AppDelegate.swift */; };
 		77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A50B4A26AE5550006F6E2D /* Assets.xcassets */; };
 		77A50B4E26AE5550006F6E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A50B4C26AE5550006F6E2D /* LaunchScreen.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		21C1576BB88FEA4B412D038F /* Pods-HXHSwiftHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXHSwiftHub.debug.xcconfig"; path = "Target Support Files/Pods-HXHSwiftHub/Pods-HXHSwiftHub.debug.xcconfig"; sourceTree = "<group>"; };
 		230FED86589FAFB3A902022A /* Pods-HXHSwiftHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXHSwiftHub.release.xcconfig"; path = "Target Support Files/Pods-HXHSwiftHub/Pods-HXHSwiftHub.release.xcconfig"; sourceTree = "<group>"; };
+		77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHLoadHtmlVC.swift; sourceTree = "<group>"; };
+		77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHLoadHtmlVC.xib; sourceTree = "<group>"; };
 		77A50B3E26AE554F006F6E2D /* HXHSwiftHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXHSwiftHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A50B4126AE554F006F6E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A50B4A26AE5550006F6E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +71,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		77420FEA26AFDBD300BAE5E0 /* LoadHtml */ = {
+			isa = PBXGroup;
+			children = (
+				77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */,
+				77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */,
+			);
+			path = LoadHtml;
+			sourceTree = "<group>";
+		};
 		77A50B3526AE554F006F6E2D = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +116,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				77420FEA26AFDBD300BAE5E0 /* LoadHtml */,
 				77A50B5626AE629A006F6E2D /* RxSwift */,
 				77A50B5926AE629A006F6E2D /* AlgorithmVC */,
 			);
@@ -206,6 +220,7 @@
 				77A50B6026AE629A006F6E2D /* AlgorithmVC.xib in Resources */,
 				77A50B4E26AE5550006F6E2D /* LaunchScreen.storyboard in Resources */,
 				77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */,
+				77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */,
 				77A50B5E26AE629A006F6E2D /* TfBindBtnVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +278,7 @@
 				77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */,
 				77A50B5D26AE629A006F6E2D /* TfBindBtnVC.swift in Sources */,
 				77A50B5F26AE629A006F6E2D /* Algorithm.swift in Sources */,
+				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,
 				77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

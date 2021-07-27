@@ -26,19 +26,18 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         return manager.tableItems?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if let sources = manager.tableItems {
             let item = sources[indexPath.row]
             switch item {
             case .tfBindBtn,
-                 .algorithm:
+                 .algorithm,
+                 .loadHtml:
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
                     cell.textLabel?.text = item.rawValue
                     return cell
                 }
             }
         }
-        
         return UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -49,14 +48,21 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             gotoTfBindBtn()
         case .algorithm:
             gotoAlgorithm()
+        case .loadHtml:
+            gotoLocalHtml()
         }
     }
     //MARK: - action
+    func gotoLocalHtml() {
+        let vc = HXHLoadHtmlVC()
+        present(vc, animated: true) {
+            
+        }
+    }
     func gotoTfBindBtn() {
         let vc = TfBindBtnVC()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true) {
-            
         }
     }
     func gotoAlgorithm() {
@@ -70,11 +76,14 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 enum MainItem: String {
     case tfBindBtn = "tf bind btn"
     case algorithm = "Algorithm"
+    case loadHtml = "Load Html"
 }
 
 class MainVCManager {
     var tableItems: [MainItem]?
     func builder() {
-        tableItems = [.tfBindBtn, .algorithm]
+        tableItems = [.tfBindBtn,
+                      .algorithm,
+                      .loadHtml]
     }
 }

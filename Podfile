@@ -9,5 +9,5 @@ target 'HXHSwiftHub' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'YYKit'
-
+  pod 'Masonry'
 end
