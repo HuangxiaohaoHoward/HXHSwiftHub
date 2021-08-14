@@ -20,6 +20,8 @@
 		77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A50B6426AE62B4006F6E2D /* MainVC.swift */; };
 		77A50B6726AE62B4006F6E2D /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A50B6526AE62B4006F6E2D /* MainVC.xib */; };
 		77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */; };
+		77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */; };
+		77E87CE826C7579400254E81 /* HXHMultiThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */; };
 		BDBA9A0A6DE36E613046603E /* Pods_HXHSwiftHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		77A50B6426AE62B4006F6E2D /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		77A50B6526AE62B4006F6E2D /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHBaseViewController.swift; sourceTree = "<group>"; };
+		77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHMultiThreadVC.swift; sourceTree = "<group>"; };
+		77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHMultiThreadVC.xib; sourceTree = "<group>"; };
 		AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXHSwiftHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -164,6 +168,8 @@
 		77E87CE126C7564600254E81 /* MultiThread */ = {
 			isa = PBXGroup;
 			children = (
+				77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */,
+				77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */,
 			);
 			path = MultiThread;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				77A50B6726AE62B4006F6E2D /* MainVC.xib in Resources */,
 				77A50B6026AE629A006F6E2D /* AlgorithmVC.xib in Resources */,
 				77A50B4E26AE5550006F6E2D /* LaunchScreen.storyboard in Resources */,
+				77E87CE826C7579400254E81 /* HXHMultiThreadVC.xib in Resources */,
 				77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */,
 				77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */,
 				77A50B5E26AE629A006F6E2D /* TfBindBtnVC.xib in Resources */,
@@ -298,6 +305,7 @@
 				77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */,
 				77A50B5D26AE629A006F6E2D /* TfBindBtnVC.swift in Sources */,
 				77A50B5F26AE629A006F6E2D /* Algorithm.swift in Sources */,
+				77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */,
 				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,
 				77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */,
 			);

@@ -31,7 +31,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             switch item {
             case .tfBindBtn,
                  .algorithm,
-                 .loadHtml:
+                 .loadHtml,
+                 .multiThread:
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
                     cell.textLabel?.text = item.rawValue
                     return cell
@@ -50,6 +51,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             gotoAlgorithm()
         case .loadHtml:
             gotoLocalHtml()
+        case .multiThread:
+            gotoMultiThread()
         }
     }
     //MARK: - action
@@ -71,12 +74,19 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             
         }
     }
+    func gotoMultiThread() {
+        let vc = HXHMultiThreadVC()
+        present(vc, animated: true) {
+            
+        }
+    }
 }
 
 enum MainItem: String {
     case tfBindBtn = "tf bind btn"
     case algorithm = "Algorithm"
     case loadHtml = "Load Html"
+    case multiThread = "Multi Thread"
 }
 
 class MainVCManager {
@@ -84,6 +94,7 @@ class MainVCManager {
     func builder() {
         tableItems = [.tfBindBtn,
                       .algorithm,
-                      .loadHtml]
+                      .loadHtml,
+                      .multiThread]
     }
 }
