@@ -19,6 +19,7 @@
 		77A50B6126AE629A006F6E2D /* AlgorithmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A50B5C26AE629A006F6E2D /* AlgorithmVC.swift */; };
 		77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A50B6426AE62B4006F6E2D /* MainVC.swift */; };
 		77A50B6726AE62B4006F6E2D /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A50B6526AE62B4006F6E2D /* MainVC.xib */; };
+		77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */; };
 		BDBA9A0A6DE36E613046603E /* Pods_HXHSwiftHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		77A50B5C26AE629A006F6E2D /* AlgorithmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmVC.swift; sourceTree = "<group>"; };
 		77A50B6426AE62B4006F6E2D /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		77A50B6526AE62B4006F6E2D /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHBaseViewController.swift; sourceTree = "<group>"; };
 		AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXHSwiftHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				77E87CE126C7564600254E81 /* MultiThread */,
 				77420FEA26AFDBD300BAE5E0 /* LoadHtml */,
 				77A50B5626AE629A006F6E2D /* RxSwift */,
 				77A50B5926AE629A006F6E2D /* AlgorithmVC */,
@@ -145,6 +148,7 @@
 		77A50B6226AE62A5006F6E2D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				77E87CE226C7567300254E81 /* Base */,
 				77A50B6326AE62A5006F6E2D /* DB */,
 			);
 			path = Utils;
@@ -155,6 +159,21 @@
 			children = (
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		77E87CE126C7564600254E81 /* MultiThread */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MultiThread;
+			sourceTree = "<group>";
+		};
+		77E87CE226C7567300254E81 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +295,7 @@
 			files = (
 				77A50B6126AE629A006F6E2D /* AlgorithmVC.swift in Sources */,
 				77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */,
+				77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */,
 				77A50B5D26AE629A006F6E2D /* TfBindBtnVC.swift in Sources */,
 				77A50B5F26AE629A006F6E2D /* Algorithm.swift in Sources */,
 				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlgorithmVC: UIViewController {
+class AlgorithmVC: HXHBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import Masonry
 
-class HXHLoadHtmlVC: UIViewController {
+class HXHLoadHtmlVC: HXHBaseViewController {
     lazy var web: WKWebView = {
         let webConfig = WKWebViewConfiguration()
         let webView = WKWebView(frame: .zero, configuration: webConfig)

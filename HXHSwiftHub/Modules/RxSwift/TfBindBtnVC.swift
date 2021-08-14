@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TfBindBtnVC: UIViewController {
+class TfBindBtnVC: HXHBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
