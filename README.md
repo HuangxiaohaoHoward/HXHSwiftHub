@@ -1,2 +1,2 @@
 # HXHSwiftHub
-Howard's swift practice & utils
+swift practice & utils
