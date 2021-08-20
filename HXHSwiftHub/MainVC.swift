@@ -42,6 +42,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let sources = manager.tableItems else { return }
         let item = sources[indexPath.row]
         switch item {
