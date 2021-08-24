@@ -32,7 +32,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             case .tfBindBtn,
                  .algorithm,
                  .loadHtml,
-                 .multiThread:
+                 .multiThread,
+                 .TestModelPerformance:
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
                     cell.textLabel?.text = item.rawValue
                     return cell
@@ -54,9 +55,41 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             gotoLocalHtml()
         case .multiThread:
             gotoMultiThread()
+        case .TestModelPerformance:
+            testModelPerformance()
         }
     }
     //MARK: - action
+    func testModelPerformance() {
+        let param = ["username" : "username",
+                     "age" : 2,
+                     "weight" : 6.5] as [String : Any]
+        var params: [[String : Any]] = []
+        var tmp1: [DecoderUser] = []
+        let dStartTime = CFAbsoluteTimeGetCurrent()
+        for _ in 0..<99999 {
+            let decoder = JSONDecoder()
+            let jsondata = try! JSONSerialization.data(withJSONObject: param)
+            let tmp = try? decoder.decode(DecoderUser.self, from: jsondata)
+            if let tmp = tmp {
+                tmp1.append(tmp)
+            }
+        }
+        print(tmp1.count)
+        print("decode time : \(String(format: "%f", CFAbsoluteTimeGetCurrent()-dStartTime))")
+        
+        var tmp2:[User] = []
+        
+        let oStartTime = CFAbsoluteTimeGetCurrent()
+        for _ in 0..<99999 {
+            let a = User(JSON: param)
+            if let a = a {
+                tmp2.append(a)
+            }
+        }
+        print(tmp2.count)
+        print("O time : \(String(format: "%f", CFAbsoluteTimeGetCurrent()-oStartTime))")
+    }
     func gotoLocalHtml() {
         let vc = HXHLoadHtmlVC()
         present(vc, animated: true) {
@@ -88,6 +121,7 @@ enum MainItem: String {
     case algorithm = "Algorithm"
     case loadHtml = "Load Html"
     case multiThread = "Multi Thread"
+    case TestModelPerformance = "Test Model Performance"
 }
 
 class MainVCManager {
@@ -96,6 +130,7 @@ class MainVCManager {
         tableItems = [.tfBindBtn,
                       .algorithm,
                       .loadHtml,
-                      .multiThread]
+                      .multiThread,
+                      .TestModelPerformance]
     }
 }

@@ -10,6 +10,7 @@
 		77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */; };
 		77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */; };
 		7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */; };
+		778484E826D3AF0E0009977D /* TestModelPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778484E726D3AF0E0009977D /* TestModelPerformance.swift */; };
 		77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A50B4126AE554F006F6E2D /* AppDelegate.swift */; };
 		77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A50B4A26AE5550006F6E2D /* Assets.xcassets */; };
 		77A50B4E26AE5550006F6E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A50B4C26AE5550006F6E2D /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 		77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHLoadHtmlVC.swift; sourceTree = "<group>"; };
 		77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHLoadHtmlVC.xib; sourceTree = "<group>"; };
 		7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHFMDBManager.swift; sourceTree = "<group>"; };
+		778484E726D3AF0E0009977D /* TestModelPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelPerformance.swift; sourceTree = "<group>"; };
 		77A50B3E26AE554F006F6E2D /* HXHSwiftHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXHSwiftHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A50B4126AE554F006F6E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A50B4A26AE5550006F6E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 			path = LoadHtml;
 			sourceTree = "<group>";
 		};
+		778484E626D3AEE20009977D /* TestModelPerformance */ = {
+			isa = PBXGroup;
+			children = (
+				778484E726D3AF0E0009977D /* TestModelPerformance.swift */,
+			);
+			path = TestModelPerformance;
+			sourceTree = "<group>";
+		};
 		77A50B3526AE554F006F6E2D = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				778484E626D3AEE20009977D /* TestModelPerformance */,
 				77E87CE126C7564600254E81 /* MultiThread */,
 				77420FEA26AFDBD300BAE5E0 /* LoadHtml */,
 				77A50B5626AE629A006F6E2D /* RxSwift */,
@@ -303,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778484E826D3AF0E0009977D /* TestModelPerformance.swift in Sources */,
 				7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */,
 				77A50B6126AE629A006F6E2D /* AlgorithmVC.swift in Sources */,
 				77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */,

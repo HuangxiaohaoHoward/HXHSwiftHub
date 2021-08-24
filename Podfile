@@ -8,4 +8,5 @@ target 'HXHSwiftHub' do
   pod 'RxCocoa'
   pod 'YYKit'
   pod 'Masonry'
+  pod 'ObjectMapper'
 end
