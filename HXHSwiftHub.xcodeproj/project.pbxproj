@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7728D2BE26F319FE00433C76 /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728D2BD26F319FE00433C76 /* LinkedListNode.swift */; };
+		7728D2C026F31A0D00433C76 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728D2BF26F31A0D00433C76 /* LinkedList.swift */; };
 		77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */; };
 		77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */; };
+		77461D9326E84E830074ADF9 /* HXHDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77461D9226E84E830074ADF9 /* HXHDataStructure.swift */; };
 		7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */; };
 		778484E826D3AF0E0009977D /* TestModelPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778484E726D3AF0E0009977D /* TestModelPerformance.swift */; };
 		77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A50B4126AE554F006F6E2D /* AppDelegate.swift */; };
@@ -30,8 +33,11 @@
 /* Begin PBXFileReference section */
 		21C1576BB88FEA4B412D038F /* Pods-HXHSwiftHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXHSwiftHub.debug.xcconfig"; path = "Target Support Files/Pods-HXHSwiftHub/Pods-HXHSwiftHub.debug.xcconfig"; sourceTree = "<group>"; };
 		230FED86589FAFB3A902022A /* Pods-HXHSwiftHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXHSwiftHub.release.xcconfig"; path = "Target Support Files/Pods-HXHSwiftHub/Pods-HXHSwiftHub.release.xcconfig"; sourceTree = "<group>"; };
+		7728D2BD26F319FE00433C76 /* LinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
+		7728D2BF26F31A0D00433C76 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHLoadHtmlVC.swift; sourceTree = "<group>"; };
 		77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHLoadHtmlVC.xib; sourceTree = "<group>"; };
+		77461D9226E84E830074ADF9 /* HXHDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDataStructure.swift; sourceTree = "<group>"; };
 		7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHFMDBManager.swift; sourceTree = "<group>"; };
 		778484E726D3AF0E0009977D /* TestModelPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelPerformance.swift; sourceTree = "<group>"; };
 		77A50B3E26AE554F006F6E2D /* HXHSwiftHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXHSwiftHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +87,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7728D2BC26F319E200433C76 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				7728D2BD26F319FE00433C76 /* LinkedListNode.swift */,
+				7728D2BF26F31A0D00433C76 /* LinkedList.swift */,
+			);
+			path = LinkedList;
+			sourceTree = "<group>";
+		};
 		77420FEA26AFDBD300BAE5E0 /* LoadHtml */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +103,15 @@
 				77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */,
 			);
 			path = LoadHtml;
+			sourceTree = "<group>";
+		};
+		77461D9126E84D580074ADF9 /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				77461D9226E84E830074ADF9 /* HXHDataStructure.swift */,
+				7728D2BC26F319E200433C76 /* LinkedList */,
+			);
+			path = DataStructure;
 			sourceTree = "<group>";
 		};
 		778484E626D3AEE20009977D /* TestModelPerformance */ = {
@@ -134,6 +158,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				77461D9126E84D580074ADF9 /* DataStructure */,
 				778484E626D3AEE20009977D /* TestModelPerformance */,
 				77E87CE126C7564600254E81 /* MultiThread */,
 				77420FEA26AFDBD300BAE5E0 /* LoadHtml */,
@@ -314,15 +339,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7728D2BE26F319FE00433C76 /* LinkedListNode.swift in Sources */,
 				778484E826D3AF0E0009977D /* TestModelPerformance.swift in Sources */,
 				7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */,
 				77A50B6126AE629A006F6E2D /* AlgorithmVC.swift in Sources */,
 				77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */,
 				77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */,
+				77461D9326E84E830074ADF9 /* HXHDataStructure.swift in Sources */,
 				77A50B5D26AE629A006F6E2D /* TfBindBtnVC.swift in Sources */,
 				77A50B5F26AE629A006F6E2D /* Algorithm.swift in Sources */,
 				77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */,
 				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,
+				7728D2C026F31A0D00433C76 /* LinkedList.swift in Sources */,
 				77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

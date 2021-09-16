@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlgorithmVC" customModule="RxSwiftDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlgorithmVC" customModule="HXHSwiftHub" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,17 +19,39 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-Wk-WdQ">
-                    <rect key="frame" x="65" y="208" width="155" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="两个线程按顺序输出ab"/>
-                    <connections>
-                        <action selector="twoThreadPrintABInOrder" destination="-1" eventType="touchUpInside" id="GLY-AN-QG0"/>
-                    </connections>
-                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="i8Z-69-Woy">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ixk-xA-H1z">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-Wk-WdQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                    <state key="normal" title="两个线程按顺序输出ab"/>
+                                    <connections>
+                                        <action selector="twoThreadPrintABInOrder" destination="-1" eventType="touchUpInside" id="GLY-AN-QG0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Ixk-xA-H1z" secondAttribute="bottom" id="DIb-SC-HDC"/>
+                        <constraint firstItem="Ixk-xA-H1z" firstAttribute="leading" secondItem="i8Z-69-Woy" secondAttribute="leading" id="Yw1-rE-E66"/>
+                        <constraint firstAttribute="trailing" secondItem="Ixk-xA-H1z" secondAttribute="trailing" id="fEY-ai-CfS"/>
+                        <constraint firstItem="Ixk-xA-H1z" firstAttribute="top" secondItem="i8Z-69-Woy" secondAttribute="top" id="nD2-A0-ELk"/>
+                        <constraint firstItem="Ixk-xA-H1z" firstAttribute="centerX" secondItem="i8Z-69-Woy" secondAttribute="centerX" id="o7p-6p-5NE"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i8Z-69-Woy" secondAttribute="trailing" id="f2b-2l-WtL"/>
+                <constraint firstItem="i8Z-69-Woy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fLO-8E-3GR"/>
+                <constraint firstItem="i8Z-69-Woy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gY3-KL-Ucc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="i8Z-69-Woy" secondAttribute="bottom" id="qJF-67-WS0"/>
+            </constraints>
             <point key="canvasLocation" x="45" y="93"/>
         </view>
     </objects>
