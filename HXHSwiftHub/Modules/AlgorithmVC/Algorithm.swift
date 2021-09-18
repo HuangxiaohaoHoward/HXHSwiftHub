@@ -13,6 +13,22 @@ class Algorithm: NSObject {
     func twoThreadPrintABInOrder() {
         
     }
+    /// 返回下标，错误为-1. return subscript， error num is -1。
+    func binarySearch()-> Int {
+        var nums: [Int] = [-1,0,3,5,9,12]
+        var result: Int = -1
+        let target = 0
+        let middleNum = nums.count/2
+        let middle = nums[middleNum]
+        if target == middle {
+            return nums.firstIndex(of: target) ?? -1
+        }
+        if target < middle {
+            
+        }
+        return result
+    }
+    
     /// 二分查找：判断有序的数组里面是否包含某一个数字
 //    func binarySearch(x: Int) -> Bool {
 //        var result = false
