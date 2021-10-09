@@ -17,7 +17,7 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         manager.builder()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
+        title = "HXH Swift Hud"
     }
     
 }
@@ -99,8 +99,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func gotoTfBindBtn() {
         let vc = TfBindBtnVC()
         vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true) {
-        }
+//        present(vc, animated: true) {
+//        }
+        navigationController?.pushViewController(vc, animated: true)
     }
     func gotoAlgorithm() {
         let vc = AlgorithmVC()

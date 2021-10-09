@@ -23,7 +23,8 @@ extension AppDelegate {
     func setupUI() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        window?.rootViewController = MainVC()
+        let rootVC = HXHBaseNavigationController(rootViewController: MainVC())
+        window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
     }
 }

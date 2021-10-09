@@ -13,6 +13,9 @@
 		77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */; };
 		77461D9326E84E830074ADF9 /* HXHDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77461D9226E84E830074ADF9 /* HXHDataStructure.swift */; };
 		7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */; };
+		776A098227119AB300332E60 /* RxSwiftSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A098027119AB300332E60 /* RxSwiftSearchVC.swift */; };
+		776A098327119AB300332E60 /* RxSwiftSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776A098127119AB300332E60 /* RxSwiftSearchVC.xib */; };
+		776A09852711A00500332E60 /* HXHBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A09842711A00500332E60 /* HXHBaseNavigationController.swift */; };
 		778484E826D3AF0E0009977D /* TestModelPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778484E726D3AF0E0009977D /* TestModelPerformance.swift */; };
 		77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A50B4126AE554F006F6E2D /* AppDelegate.swift */; };
 		77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A50B4A26AE5550006F6E2D /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 		77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHLoadHtmlVC.xib; sourceTree = "<group>"; };
 		77461D9226E84E830074ADF9 /* HXHDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDataStructure.swift; sourceTree = "<group>"; };
 		7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHFMDBManager.swift; sourceTree = "<group>"; };
+		776A098027119AB300332E60 /* RxSwiftSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftSearchVC.swift; sourceTree = "<group>"; };
+		776A098127119AB300332E60 /* RxSwiftSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftSearchVC.xib; sourceTree = "<group>"; };
+		776A09842711A00500332E60 /* HXHBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHBaseNavigationController.swift; sourceTree = "<group>"; };
 		778484E726D3AF0E0009977D /* TestModelPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelPerformance.swift; sourceTree = "<group>"; };
 		77A50B3E26AE554F006F6E2D /* HXHSwiftHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXHSwiftHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A50B4126AE554F006F6E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,15 @@
 			path = DataStructure;
 			sourceTree = "<group>";
 		};
+		776A097F27119A4A00332E60 /* SubModules */ = {
+			isa = PBXGroup;
+			children = (
+				776A098027119AB300332E60 /* RxSwiftSearchVC.swift */,
+				776A098127119AB300332E60 /* RxSwiftSearchVC.xib */,
+			);
+			path = SubModules;
+			sourceTree = "<group>";
+		};
 		778484E626D3AEE20009977D /* TestModelPerformance */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +188,7 @@
 			children = (
 				77A50B5726AE629A006F6E2D /* TfBindBtnVC.swift */,
 				77A50B5826AE629A006F6E2D /* TfBindBtnVC.xib */,
+				776A097F27119A4A00332E60 /* SubModules */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -217,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */,
+				776A09842711A00500332E60 /* HXHBaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -282,6 +299,7 @@
 			files = (
 				77A50B6726AE62B4006F6E2D /* MainVC.xib in Resources */,
 				77A50B6026AE629A006F6E2D /* AlgorithmVC.xib in Resources */,
+				776A098327119AB300332E60 /* RxSwiftSearchVC.xib in Resources */,
 				77A50B4E26AE5550006F6E2D /* LaunchScreen.storyboard in Resources */,
 				77E87CE826C7579400254E81 /* HXHMultiThreadVC.xib in Resources */,
 				77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */,
@@ -345,6 +363,8 @@
 				77A50B6126AE629A006F6E2D /* AlgorithmVC.swift in Sources */,
 				77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */,
 				77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */,
+				776A098227119AB300332E60 /* RxSwiftSearchVC.swift in Sources */,
+				776A09852711A00500332E60 /* HXHBaseNavigationController.swift in Sources */,
 				77461D9326E84E830074ADF9 /* HXHDataStructure.swift in Sources */,
 				77A50B5D26AE629A006F6E2D /* TfBindBtnVC.swift in Sources */,
 				77A50B5F26AE629A006F6E2D /* Algorithm.swift in Sources */,
