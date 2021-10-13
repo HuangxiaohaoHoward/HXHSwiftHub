@@ -80,6 +80,14 @@ func testOptionSet() {
     print(opt)
     opt.remove(.detention)
     print(opt)
+    
+    let a: CGFloat = 1.23000
+    print(a)
+    print(String(format: "%.3f", a))
+    print(a.cleanZero)
+    let b: Double = 1.23000
+    print(b)
+    print(b.cleanZero)
 }
     func testModelPerformance() {
         let param = ["username" : "username",
