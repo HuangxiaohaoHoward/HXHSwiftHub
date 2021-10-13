@@ -33,7 +33,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
                  .algorithm,
                  .loadHtml,
                  .multiThread,
-                 .TestModelPerformance:
+                 .TestModelPerformance,
+                 .optionSet :
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
                     cell.textLabel?.text = item.rawValue
                     return cell
@@ -57,9 +58,29 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             gotoMultiThread()
         case .TestModelPerformance:
             testModelPerformance()
+        case .optionSet:
+            testOptionSet()
         }
     }
-    //MARK: - action
+//MARK: - action
+func testOptionSet() {
+    var opt: CellTypeOptions = [.detention]
+    opt = opt.union(.fuel)
+    switch opt {
+    case [.detention, .fuel]:
+        print("two")
+    case let opt where opt.contains([.detention]):
+        print("test contain ")
+    case [.fuel]:
+        print("fuel")
+    default:
+        print("default ")
+    }
+    opt.insert(.detention)
+    print(opt)
+    opt.remove(.detention)
+    print(opt)
+}
     func testModelPerformance() {
         let param = ["username" : "username",
                      "age" : 2,
@@ -123,6 +144,7 @@ enum MainItem: String {
     case loadHtml = "Load Html"
     case multiThread = "Multi Thread"
     case TestModelPerformance = "Test Model Performance"
+    case optionSet = "OptionSet"
 }
 
 class MainVCManager {
@@ -132,6 +154,14 @@ class MainVCManager {
                       .algorithm,
                       .loadHtml,
                       .multiThread,
-                      .TestModelPerformance]
+                      .TestModelPerformance,
+                      .optionSet]
     }
+}
+
+struct CellTypeOptions: OptionSet {
+    let rawValue: Int
+    static let fuel = CellTypeOptions(rawValue: 1 << 0)
+    static let trip = CellTypeOptions(rawValue: 1 << 1)
+    static let detention = CellTypeOptions(rawValue: 1 << 2)
 }

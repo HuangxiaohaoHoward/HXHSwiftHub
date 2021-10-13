@@ -12,10 +12,12 @@ class TfBindBtnVC: HXHBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        setupBaseUI()
     }
-
+    func setupBaseUI() {
+        title = "RxSwift Demo List"
+    }
+    
     @IBAction func gotoSearchTFVC(_ sender: Any) {
         let vc = RxSwiftSearchVC()
         navigationController?.pushViewController(vc, animated: true)

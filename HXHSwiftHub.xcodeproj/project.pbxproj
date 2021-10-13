@@ -102,6 +102,13 @@
 			path = LinkedList;
 			sourceTree = "<group>";
 		};
+		77330CDF27155C0900B56D95 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		77420FEA26AFDBD300BAE5E0 /* LoadHtml */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +180,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				77330CDF27155C0900B56D95 /* Enum */,
 				77461D9126E84D580074ADF9 /* DataStructure */,
 				778484E626D3AEE20009977D /* TestModelPerformance */,
 				77E87CE126C7564600254E81 /* MultiThread */,
