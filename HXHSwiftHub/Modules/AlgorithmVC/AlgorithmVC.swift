@@ -9,7 +9,7 @@
 import UIKit
 
 class AlgorithmVC: HXHBaseViewController {
-    
+    let manager = Algorithm()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +18,7 @@ class AlgorithmVC: HXHBaseViewController {
     //MARK: - action
     
     @IBAction func binarySearch(_ sender: UIButton) {
-        Algorithm().binarySearch()
+        manager.binarySearch()
     }
     @IBAction func twoThreadPrintABInOrder() {
         twoThreadPrintABInOrderBySemaphore()

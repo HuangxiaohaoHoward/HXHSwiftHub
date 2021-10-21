@@ -84,7 +84,7 @@ func testOptionSet() {
     let a: CGFloat = 1.23000
     print(a)
     print(String(format: "%.3f", a))
-    print(a.cleanZero)
+    
     let b: Double = 1.23000
     print(b)
     print(b.cleanZero)
@@ -128,15 +128,11 @@ func testOptionSet() {
     func gotoTfBindBtn() {
         let vc = TfBindBtnVC()
         vc.modalPresentationStyle = .fullScreen
-//        present(vc, animated: true) {
-//        }
         navigationController?.pushViewController(vc, animated: true)
     }
     func gotoAlgorithm() {
         let vc = AlgorithmVC()
-        present(vc, animated: true) {
-            
-        }
+        navigationController?.pushViewController(vc, animated: true)
     }
     func gotoMultiThread() {
         let vc = HXHMultiThreadVC()
