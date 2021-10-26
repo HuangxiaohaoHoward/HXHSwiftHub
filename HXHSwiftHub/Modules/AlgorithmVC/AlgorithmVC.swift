@@ -18,7 +18,7 @@ class AlgorithmVC: HXHBaseViewController {
     //MARK: - action
     
     @IBAction func binarySearch(_ sender: UIButton) {
-        manager.binarySearch()
+        print(manager.binarySearch(x: 12))
     }
     @IBAction func twoThreadPrintABInOrder() {
         twoThreadPrintABInOrderBySemaphore()

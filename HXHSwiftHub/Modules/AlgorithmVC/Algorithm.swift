@@ -28,39 +28,31 @@ class Algorithm: NSObject {
 //
 //        }
 //        return result
-//    }
-    func binarySearch(nums: [Int]=[-1,0,3,5,9,12]) -> Bool {
+    //    }
+    
+    /// 二分查找：判断有序的数组里面是否包含某一个数字
+    /// final
+    func binarySearch(x: Int=3, nums: [Int]=[-1,0,3,5,9,12]) -> Bool {
         var result = false
-        
-        
+        let min: Int = nums.startIndex
+        let max: Int = nums.endIndex
+        if max < min {
+            return false
+        }
+        let mid: Int = (min + max)/2
+        let value = nums[mid]
+        if x == value {
+            return true
+        }
+        if x < value {
+            let tmpNums = min < mid ? Array(nums[min..<mid]) : Array<Int>()
+            result = self.binarySearch(x: x, nums: tmpNums)
+        }
+        if x > value {
+            let tmpNums = max > mid ? Array(nums[mid..<max]) : Array<Int>()
+            result = self.binarySearch(x: x, nums: tmpNums)
+        }
         return result
     }
-    /// 二分查找：判断有序的数组里面是否包含某一个数字
-//    func binarySearch(x: Int) -> Bool {
-//        var result = false
-//        let min = self.startIndex
-//        let max = self.endIndex - 1
-//
-//        if min > max {
-//            return false
-//        }
-//
-//        let mid = Int((min + max)/2)
-//        let value = self[mid]
-//
-//        if x == value {
-//            return true
-//        }
-//
-//        if x < value {
-//            let array = min < mid ? Array(self[min..<mid]) : Array<Int>()
-//            result = array.binarySearch(x: x)
-//        }
-//
-//        if x > value {
-//            let array = max > mid ? Array(self[mid..<max]) : Array<Int>()
-//            result = array.binarySearch(x: x)
-//        }
-//        return result
-//    }
+    
 }
