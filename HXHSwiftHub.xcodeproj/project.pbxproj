@@ -12,7 +12,7 @@
 		77330CE227168CBC00B56D95 /* HXHNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77330CE127168CBC00B56D95 /* HXHNumbers.swift */; };
 		77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */; };
 		77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */; };
-		77461D9326E84E830074ADF9 /* HXHDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77461D9226E84E830074ADF9 /* HXHDataStructure.swift */; };
+		77461D9326E84E830074ADF9 /* HXHDataStructureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77461D9226E84E830074ADF9 /* HXHDataStructureVC.swift */; };
 		7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */; };
 		776A098227119AB300332E60 /* RxSwiftSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A098027119AB300332E60 /* RxSwiftSearchVC.swift */; };
 		776A098327119AB300332E60 /* RxSwiftSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776A098127119AB300332E60 /* RxSwiftSearchVC.xib */; };
@@ -31,6 +31,9 @@
 		77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */; };
 		77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */; };
 		77E87CE826C7579400254E81 /* HXHMultiThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */; };
+		A6066CAE2732F63700583D3C /* HXHArrayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6066CAC2732F63700583D3C /* HXHArrayVC.swift */; };
+		A6066CAF2732F63700583D3C /* HXHArrayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6066CAD2732F63700583D3C /* HXHArrayVC.xib */; };
+		A65878112732C6A000E7357A /* HXHArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65878102732C6A000E7357A /* HXHArray.swift */; };
 		BDBA9A0A6DE36E613046603E /* Pods_HXHSwiftHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +45,7 @@
 		77330CE127168CBC00B56D95 /* HXHNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHNumbers.swift; sourceTree = "<group>"; };
 		77420FEB26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHLoadHtmlVC.swift; sourceTree = "<group>"; };
 		77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHLoadHtmlVC.xib; sourceTree = "<group>"; };
-		77461D9226E84E830074ADF9 /* HXHDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDataStructure.swift; sourceTree = "<group>"; };
+		77461D9226E84E830074ADF9 /* HXHDataStructureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDataStructureVC.swift; sourceTree = "<group>"; };
 		7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHFMDBManager.swift; sourceTree = "<group>"; };
 		776A098027119AB300332E60 /* RxSwiftSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftSearchVC.swift; sourceTree = "<group>"; };
 		776A098127119AB300332E60 /* RxSwiftSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftSearchVC.xib; sourceTree = "<group>"; };
@@ -63,6 +66,9 @@
 		77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHBaseViewController.swift; sourceTree = "<group>"; };
 		77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHMultiThreadVC.swift; sourceTree = "<group>"; };
 		77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHMultiThreadVC.xib; sourceTree = "<group>"; };
+		A6066CAC2732F63700583D3C /* HXHArrayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHArrayVC.swift; sourceTree = "<group>"; };
+		A6066CAD2732F63700583D3C /* HXHArrayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHArrayVC.xib; sourceTree = "<group>"; };
+		A65878102732C6A000E7357A /* HXHArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHArray.swift; sourceTree = "<group>"; };
 		AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXHSwiftHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,7 +130,8 @@
 		77461D9126E84D580074ADF9 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				77461D9226E84E830074ADF9 /* HXHDataStructure.swift */,
+				A658780F2732C65F00E7357A /* Array */,
+				77461D9226E84E830074ADF9 /* HXHDataStructureVC.swift */,
 				7728D2BC26F319E200433C76 /* LinkedList */,
 			);
 			path = DataStructure;
@@ -249,6 +256,24 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		A6066CAB2732F5C400583D3C /* HXHArrayVC */ = {
+			isa = PBXGroup;
+			children = (
+				A6066CAC2732F63700583D3C /* HXHArrayVC.swift */,
+				A6066CAD2732F63700583D3C /* HXHArrayVC.xib */,
+			);
+			path = HXHArrayVC;
+			sourceTree = "<group>";
+		};
+		A658780F2732C65F00E7357A /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				A6066CAB2732F5C400583D3C /* HXHArrayVC */,
+				A65878102732C6A000E7357A /* HXHArray.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +339,7 @@
 				77A50B4E26AE5550006F6E2D /* LaunchScreen.storyboard in Resources */,
 				77E87CE826C7579400254E81 /* HXHMultiThreadVC.xib in Resources */,
 				77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */,
+				A6066CAF2732F63700583D3C /* HXHArrayVC.xib in Resources */,
 				77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */,
 				77A50B5E26AE629A006F6E2D /* TfBindBtnVC.xib in Resources */,
 			);
@@ -368,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65878112732C6A000E7357A /* HXHArray.swift in Sources */,
 				7728D2BE26F319FE00433C76 /* LinkedListNode.swift in Sources */,
 				778484E826D3AF0E0009977D /* TestModelPerformance.swift in Sources */,
 				7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */,
@@ -377,13 +404,14 @@
 				77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */,
 				776A098227119AB300332E60 /* RxSwiftSearchVC.swift in Sources */,
 				776A09852711A00500332E60 /* HXHBaseNavigationController.swift in Sources */,
-				77461D9326E84E830074ADF9 /* HXHDataStructure.swift in Sources */,
+				77461D9326E84E830074ADF9 /* HXHDataStructureVC.swift in Sources */,
 				77A50B5D26AE629A006F6E2D /* TfBindBtnVC.swift in Sources */,
 				77A50B5F26AE629A006F6E2D /* Algorithm.swift in Sources */,
 				77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */,
 				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,
 				7728D2C026F31A0D00433C76 /* LinkedList.swift in Sources */,
 				77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */,
+				A6066CAE2732F63700583D3C /* HXHArrayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

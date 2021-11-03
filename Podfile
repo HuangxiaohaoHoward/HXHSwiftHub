@@ -11,4 +11,6 @@ target 'HXHSwiftHub' do
   pod 'YYKit', '1.0.9'
   pod 'Masonry'
   pod 'ObjectMapper'
+  pod 'SnapKit', '~> 5.0.0'
+  
 end

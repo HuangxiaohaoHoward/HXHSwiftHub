@@ -30,11 +30,12 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             let item = sources[indexPath.row]
             switch item {
             case .tfBindBtn,
-                 .algorithm,
-                 .loadHtml,
-                 .multiThread,
-                 .TestModelPerformance,
-                 .optionSet :
+                    .algorithm,
+                    .loadHtml,
+                    .multiThread,
+                    .TestModelPerformance,
+                    .optionSet,
+                    .dataStructure :
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
                     cell.textLabel?.text = item.rawValue
                     return cell
@@ -60,35 +61,41 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             testModelPerformance()
         case .optionSet:
             testOptionSet()
+        case .dataStructure:
+            gotoDataStructure()
         }
     }
-//MARK: - action
-func testOptionSet() {
-    var opt: CellTypeOptions = [.detention]
-    opt = opt.union(.fuel)
-    switch opt {
-    case [.detention, .fuel]:
-        print("two")
-    case let opt where opt.contains([.detention]):
-        print("test contain ")
-    case [.fuel]:
-        print("fuel")
-    default:
-        print("default ")
+    //MARK: - action
+    func gotoDataStructure() {
+        let vc = HXHDataStructureVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
-    opt.insert(.detention)
-    print(opt)
-    opt.remove(.detention)
-    print(opt)
-    
-    let a: CGFloat = 1.23000
-    print(a)
-    print(String(format: "%.3f", a))
-    
-    let b: Double = 1.23000
-    print(b)
-    print(b.cleanZero)
-}
+    func testOptionSet() {
+        var opt: CellTypeOptions = [.detention]
+        opt = opt.union(.fuel)
+        switch opt {
+        case [.detention, .fuel]:
+            print("two")
+        case let opt where opt.contains([.detention]):
+            print("test contain ")
+        case [.fuel]:
+            print("fuel")
+        default:
+            print("default ")
+        }
+        opt.insert(.detention)
+        print(opt)
+        opt.remove(.detention)
+        print(opt)
+        
+        let a: CGFloat = 1.23000
+        print(a)
+        print(String(format: "%.3f", a))
+        
+        let b: Double = 1.23000
+        print(b)
+        print(b.cleanZero)
+    }
     func testModelPerformance() {
         let param = ["username" : "username",
                      "age" : 2,
@@ -121,9 +128,11 @@ func testOptionSet() {
     }
     func gotoLocalHtml() {
         let vc = HXHLoadHtmlVC()
-        present(vc, animated: true) {
-            
-        }
+        navigationController?.pushViewController(vc, animated: true)
+       
+//        present(vc, animated: true) {
+//
+//        }
     }
     func gotoTfBindBtn() {
         let vc = TfBindBtnVC()
@@ -136,9 +145,10 @@ func testOptionSet() {
     }
     func gotoMultiThread() {
         let vc = HXHMultiThreadVC()
-        present(vc, animated: true) {
-            
-        }
+        navigationController?.pushViewController(vc, animated: true)
+//        present(vc, animated: true) {
+//
+//        }
     }
 }
 
@@ -149,6 +159,7 @@ enum MainItem: String {
     case multiThread = "Multi Thread"
     case TestModelPerformance = "Test Model Performance"
     case optionSet = "OptionSet"
+    case dataStructure = "Data Structure"
 }
 
 class MainVCManager {
@@ -159,7 +170,8 @@ class MainVCManager {
                       .loadHtml,
                       .multiThread,
                       .TestModelPerformance,
-                      .optionSet]
+                      .optionSet,
+                      .dataStructure]
     }
 }
 
