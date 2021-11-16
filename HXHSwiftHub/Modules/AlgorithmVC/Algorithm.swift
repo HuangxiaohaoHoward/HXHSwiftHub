@@ -55,4 +55,35 @@ class Algorithm: NSObject {
         return result
     }
     
+    
+    /*
+     已知一个整数数组 nums 和一个整数 target，取数组中任意两个值相加的和等 整数 target，返回这两个值在数组中的索引。
+     假设：
+     只有一个有效答案
+     同一个值不能重复取两次
+     可以按任意顺序返回答案
+     
+     示例 1
+     输入：nums = [2,7,11,15]，target = 9
+     输出：[0,1]
+     解释：因为 nums[0] + nums[1] == 9，所以返回 [0, 1]
+     示例 2
+     输入：nums = [3,2,4]，target = 6
+     输出：[1,2]
+     示例 3
+     输入：nums = [3,3]，target = 6
+     输出： [0,1]
+     */
+    func twoSum(nums: [Int], target: Int) -> [(Int, Int)] {
+        var dict = [Int:Int]()
+        var result = [(Int, Int)]()
+        for (idx, num) in nums.enumerated() {
+            if let lastIdx = dict[target - num] {
+                result.append((lastIdx, idx))
+            }
+            dict[num] = idx
+        }
+        return result
+    }
+
 }

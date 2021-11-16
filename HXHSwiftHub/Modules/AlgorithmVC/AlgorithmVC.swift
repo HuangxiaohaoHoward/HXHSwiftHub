@@ -17,6 +17,11 @@ class AlgorithmVC: HXHBaseViewController {
     
     //MARK: - action
     
+    @IBAction func twoNumSum(_ sender: UIButton) {
+        let nums = [2,3,4,6,0,8,11]
+        let target = 10
+        print(manager.twoSum(nums: nums, target: target))
+    }
     @IBAction func binarySearch(_ sender: UIButton) {
         print(manager.binarySearch(x: 12))
     }
