@@ -29,6 +29,7 @@ class HXHDataStructureVC: HXHBaseViewController {
     }
     //MARK: base UI
     private func setupBaseUI() {
+        title = "Data Structure"
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.addSubview(stack)
@@ -45,10 +46,12 @@ class HXHDataStructureVC: HXHBaseViewController {
             make.right.equalTo(scrollView.snp.right)
             make.bottom.equalTo(scrollView.snp.bottom)
         }
+        setupBtns()
     }
     private func setupBtns() {
         let btn = UIButton(type: .custom)
         btn.setTitle("go to Array VC", for: .normal)
+        btn.setTitleColor(.systemBlue, for: .normal)
         btn.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else { return }
@@ -56,5 +59,6 @@ class HXHDataStructureVC: HXHBaseViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
+        stack.addArrangedSubview(btn)
     }
 }

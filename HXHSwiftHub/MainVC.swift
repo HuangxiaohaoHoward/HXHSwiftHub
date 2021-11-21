@@ -129,10 +129,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func gotoLocalHtml() {
         let vc = HXHLoadHtmlVC()
         navigationController?.pushViewController(vc, animated: true)
-       
-//        present(vc, animated: true) {
-//
-//        }
     }
     func gotoTfBindBtn() {
         let vc = TfBindBtnVC()
@@ -146,9 +142,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func gotoMultiThread() {
         let vc = HXHMultiThreadVC()
         navigationController?.pushViewController(vc, animated: true)
-//        present(vc, animated: true) {
-//
-//        }
     }
 }
 
