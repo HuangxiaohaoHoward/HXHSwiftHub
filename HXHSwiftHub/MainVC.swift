@@ -35,7 +35,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
                     .multiThread,
                     .TestModelPerformance,
                     .optionSet,
-                    .dataStructure :
+                    .dataStructure,
+                    .database:
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
                     cell.textLabel?.text = item.rawValue
                     return cell
@@ -63,9 +64,15 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             testOptionSet()
         case .dataStructure:
             gotoDataStructure()
+        case .database:
+            gotoDatabaseVC()
         }
     }
     //MARK: - action
+    func gotoDatabaseVC() {
+        let vc = HXHDatabaseVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     func gotoDataStructure() {
         let vc = HXHDataStructureVC()
         navigationController?.pushViewController(vc, animated: true)
@@ -153,6 +160,7 @@ enum MainItem: String {
     case TestModelPerformance = "Test Model Performance"
     case optionSet = "OptionSet"
     case dataStructure = "Data Structure"
+    case database = "Database"
 }
 
 class MainVCManager {
@@ -164,7 +172,8 @@ class MainVCManager {
                       .multiThread,
                       .TestModelPerformance,
                       .optionSet,
-                      .dataStructure]
+                      .dataStructure,
+                      .database]
     }
 }
 
