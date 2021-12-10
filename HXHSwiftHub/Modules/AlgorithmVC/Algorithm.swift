@@ -85,5 +85,48 @@ class Algorithm: NSObject {
         }
         return result
     }
+//MARK: - 盛最多水的容器
+    /*
+    盛最多水的容器
+    
+    分解：
+    index的差和第二大的value的乘积最大
+    */
+    /// 基础的暴力解法，会时间复杂度太差
+    func maxArea(nums: [Int])-> Int {
+        var area: Int = 0
+        for i in 0..<nums.count {
+            for j in i..<nums.count {
+                let x = j - i
+                let y = min(nums[i], nums[j])
+                let tmpArea = x * y
+                if tmpArea > area {
+                    area = tmpArea
+                    print("------ i : \(i) ; j : \(j) ; area : \(area)  ------")
 
+                }
+            }
+        }
+        return area
+    }
+
+
+    /// 从最长的x轴开始计算。
+    func maxArea2(_ height: [Int]) -> Int {
+        var area: Int = 0
+        var left: Int = 0
+        var right: Int = height.count - 1
+        while left < right {
+            let tmpHeight = min(height[left], height[right])
+            area = max(area, tmpHeight * (right - left))
+            
+            if tmpHeight == height[left] {
+                left += 1
+            } else {
+                right -= 1
+            }
+            print("--- left: \(left), right : \(right) ---")
+        }
+        return area
+    }
 }
