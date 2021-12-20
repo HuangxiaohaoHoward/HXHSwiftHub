@@ -7,7 +7,7 @@
 
 import UIKit
 import WebKit
-import Masonry
+import SnapKit
 
 class HXHLoadHtmlVC: HXHBaseViewController {
     lazy var web: WKWebView = {
@@ -131,8 +131,8 @@ class HXHLoadHtmlVC: HXHBaseViewController {
         """
     func setupWeb() {
         view.addSubview(web)
-        web.mas_makeConstraints { make in
-            make?.edges.equalTo()
+        web.snp.makeConstraints { make in
+            make.edges.equalTo(self.view)
         }
         web.loadHTMLString(str, baseURL: nil)
     }
