@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770233152770993900284C07 /* HXHVoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770233132770993900284C07 /* HXHVoiceVC.swift */; };
+		770233162770993900284C07 /* HXHVoiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 770233142770993900284C07 /* HXHVoiceVC.xib */; };
 		7728D2BE26F319FE00433C76 /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728D2BD26F319FE00433C76 /* LinkedListNode.swift */; };
 		7728D2C026F31A0D00433C76 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728D2BF26F31A0D00433C76 /* LinkedList.swift */; };
 		77330CE227168CBC00B56D95 /* HXHNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77330CE127168CBC00B56D95 /* HXHNumbers.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		21C1576BB88FEA4B412D038F /* Pods-HXHSwiftHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXHSwiftHub.debug.xcconfig"; path = "Target Support Files/Pods-HXHSwiftHub/Pods-HXHSwiftHub.debug.xcconfig"; sourceTree = "<group>"; };
 		230FED86589FAFB3A902022A /* Pods-HXHSwiftHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXHSwiftHub.release.xcconfig"; path = "Target Support Files/Pods-HXHSwiftHub/Pods-HXHSwiftHub.release.xcconfig"; sourceTree = "<group>"; };
+		770233132770993900284C07 /* HXHVoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHVoiceVC.swift; sourceTree = "<group>"; };
+		770233142770993900284C07 /* HXHVoiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHVoiceVC.xib; sourceTree = "<group>"; };
 		7728D2BD26F319FE00433C76 /* LinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
 		7728D2BF26F31A0D00433C76 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		77330CE127168CBC00B56D95 /* HXHNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHNumbers.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 				AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77023312277098DB00284C07 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				770233132770993900284C07 /* HXHVoiceVC.swift */,
+				770233142770993900284C07 /* HXHVoiceVC.xib */,
+			);
+			path = Voice;
 			sourceTree = "<group>";
 		};
 		7728D2BC26F319E200433C76 /* LinkedList */ = {
@@ -196,6 +209,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				77023312277098DB00284C07 /* Voice */,
 				A62A6759274E901700356F37 /* Database */,
 				77461D9126E84D580074ADF9 /* DataStructure */,
 				778484E626D3AEE20009977D /* TestModelPerformance */,
@@ -359,6 +373,7 @@
 				77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */,
 				A6066CAF2732F63700583D3C /* HXHArrayVC.xib in Resources */,
 				77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */,
+				770233162770993900284C07 /* HXHVoiceVC.xib in Resources */,
 				77A50B5E26AE629A006F6E2D /* TfBindBtnVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +446,7 @@
 				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,
 				7728D2C026F31A0D00433C76 /* LinkedList.swift in Sources */,
 				77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */,
+				770233152770993900284C07 /* HXHVoiceVC.swift in Sources */,
 				A6066CAE2732F63700583D3C /* HXHArrayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -36,7 +36,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
                     .TestModelPerformance,
                     .optionSet,
                     .dataStructure,
-                    .database:
+                    .database,
+                    .voice:
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
                     cell.textLabel?.text = item.rawValue
                     return cell
@@ -66,9 +67,16 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             gotoDataStructure()
         case .database:
             gotoDatabaseVC()
+        case .voice:
+            gotoVoiceVC()
         }
     }
     //MARK: - action
+    private func gotoVoiceVC() {
+        let vc = HXHVoiceVC()
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
     func gotoDatabaseVC() {
         let vc = HXHDatabaseVC()
         navigationController?.pushViewController(vc, animated: true)
@@ -161,6 +169,7 @@ enum MainItem: String {
     case optionSet = "OptionSet"
     case dataStructure = "Data Structure"
     case database = "Database"
+    case voice = "Voice"
 }
 
 class MainVCManager {
@@ -173,7 +182,8 @@ class MainVCManager {
                       .TestModelPerformance,
                       .optionSet,
                       .dataStructure,
-                      .database]
+                      .database,
+                      .voice]
     }
 }
 
