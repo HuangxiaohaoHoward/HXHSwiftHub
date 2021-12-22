@@ -54,7 +54,15 @@ class HXHVoiceVC: HXHBaseViewController, SFSpeechRecognizerDelegate {
     }
     
     @IBAction func pressAction(_ sender: UIButton) {
-        
+        if audioEngine.isRunning {
+            audioEngine.stop()
+            recognitionRequest?.endAudio()
+            pressBtn.setTitle("Start Recording", for: .normal)
+
+        } else {
+            startSpeech()
+            pressBtn.setTitle("stop recording", for: .normal)
+        }
     }
     func startSpeech() {
         if recognitionTask != nil {
@@ -80,6 +88,41 @@ class HXHVoiceVC: HXHBaseViewController, SFSpeechRecognizerDelegate {
             print("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
             return
         }
-        recognitionRequest.
+        recognitionRequest.shouldReportPartialResults = true
+        recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { result, error in
+            var isFinal = false
+            if result != nil {
+                print("\(result?.bestTranscription.formattedString)")
+                isFinal = result?.isFinal ?? false
+            }
+            if error != nil || isFinal {
+                self.audioEngine.stop()
+                self.audioEngine.inputNode.removeTap(onBus: 0)
+                self.recognitionRequest = nil
+                self.recognitionTask = nil
+                
+            }
+        })
+        let recordingFormat = audioEngine.inputNode.outputFormat(forBus: 0)
+        audioEngine.inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, when in
+            self.recognitionRequest?.append(buffer)
+        }
+        audioEngine.prepare()
+        
+        do {
+            try audioEngine.start()
+        } catch {
+            print("audioEngine couldn't start because of an error. \(error.localizedDescription)")
+        }
+        print("Say something, I'm listening!")
     }
+    
+    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
+        if available {
+            pressBtn.isEnabled = true
+        } else {
+            pressBtn.isEnabled = false
+        }
+    }
+    
 }
