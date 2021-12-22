@@ -16,6 +16,7 @@
 		77420FEE26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */; };
 		77461D9326E84E830074ADF9 /* HXHDataStructureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77461D9226E84E830074ADF9 /* HXHDataStructureVC.swift */; };
 		7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */; };
+		77648FDD2773491300AEC040 /* voice_speech.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77648FDC2773491300AEC040 /* voice_speech.gif */; };
 		776A098227119AB300332E60 /* RxSwiftSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A098027119AB300332E60 /* RxSwiftSearchVC.swift */; };
 		776A098327119AB300332E60 /* RxSwiftSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776A098127119AB300332E60 /* RxSwiftSearchVC.xib */; };
 		776A09852711A00500332E60 /* HXHBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A09842711A00500332E60 /* HXHBaseNavigationController.swift */; };
@@ -54,6 +55,7 @@
 		77420FEC26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHLoadHtmlVC.xib; sourceTree = "<group>"; };
 		77461D9226E84E830074ADF9 /* HXHDataStructureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDataStructureVC.swift; sourceTree = "<group>"; };
 		7747D2AD26CE04C400F4B734 /* HXHFMDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHFMDBManager.swift; sourceTree = "<group>"; };
+		77648FDC2773491300AEC040 /* voice_speech.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = voice_speech.gif; sourceTree = "<group>"; };
 		776A098027119AB300332E60 /* RxSwiftSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftSearchVC.swift; sourceTree = "<group>"; };
 		776A098127119AB300332E60 /* RxSwiftSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftSearchVC.xib; sourceTree = "<group>"; };
 		776A09842711A00500332E60 /* HXHBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHBaseNavigationController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		77023312277098DB00284C07 /* Voice */ = {
 			isa = PBXGroup;
 			children = (
+				77648FDB277348CE00AEC040 /* Resource */,
 				770233132770993900284C07 /* HXHVoiceVC.swift */,
 				770233142770993900284C07 /* HXHVoiceVC.xib */,
 			);
@@ -154,6 +157,14 @@
 				7728D2BC26F319E200433C76 /* LinkedList */,
 			);
 			path = DataStructure;
+			sourceTree = "<group>";
+		};
+		77648FDB277348CE00AEC040 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				77648FDC2773491300AEC040 /* voice_speech.gif */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		776A097F27119A4A00332E60 /* SubModules */ = {
@@ -369,6 +380,7 @@
 				77A50B6026AE629A006F6E2D /* AlgorithmVC.xib in Resources */,
 				776A098327119AB300332E60 /* RxSwiftSearchVC.xib in Resources */,
 				77A50B4E26AE5550006F6E2D /* LaunchScreen.storyboard in Resources */,
+				77648FDD2773491300AEC040 /* voice_speech.gif in Resources */,
 				77E87CE826C7579400254E81 /* HXHMultiThreadVC.xib in Resources */,
 				77A50B4B26AE5550006F6E2D /* Assets.xcassets in Resources */,
 				A6066CAF2732F63700583D3C /* HXHArrayVC.xib in Resources */,

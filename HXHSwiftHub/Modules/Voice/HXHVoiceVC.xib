@@ -35,6 +35,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QL9-nf-0dU">
+                    <rect key="frame" x="168.5" y="755" width="77" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="open url"/>
+                    <connections>
+                        <action selector="openAction:" destination="-1" eventType="touchUpInside" id="xQq-AS-2af"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,6 +51,8 @@
                 <constraint firstItem="r5F-11-jrM" firstAttribute="top" secondItem="eZL-da-hiX" secondAttribute="bottom" constant="20" id="LP9-Mf-i8a"/>
                 <constraint firstItem="r5F-11-jrM" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="16" id="NNl-zP-SJR"/>
                 <constraint firstItem="eZL-da-hiX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TwA-as-bNh"/>
+                <constraint firstItem="QL9-nf-0dU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bQg-Wk-23F"/>
+                <constraint firstItem="eZL-da-hiX" firstAttribute="top" secondItem="QL9-nf-0dU" secondAttribute="bottom" constant="20" id="dAO-Tu-tQy"/>
             </constraints>
             <point key="canvasLocation" x="132" y="47"/>
         </view>
