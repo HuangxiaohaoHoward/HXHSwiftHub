@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		770233152770993900284C07 /* HXHVoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770233132770993900284C07 /* HXHVoiceVC.swift */; };
 		770233162770993900284C07 /* HXHVoiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 770233142770993900284C07 /* HXHVoiceVC.xib */; };
+		7724FA0327740C740067C0F9 /* HXHMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7724FA0227740C740067C0F9 /* HXHMenuRouter.swift */; };
+		7724FA0627740F130067C0F9 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7724FA0527740F130067C0F9 /* UIApplicationExtension.swift */; };
 		7728D2BE26F319FE00433C76 /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728D2BD26F319FE00433C76 /* LinkedListNode.swift */; };
 		7728D2C026F31A0D00433C76 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728D2BF26F31A0D00433C76 /* LinkedList.swift */; };
 		77330CE227168CBC00B56D95 /* HXHNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77330CE127168CBC00B56D95 /* HXHNumbers.swift */; };
@@ -48,6 +50,8 @@
 		230FED86589FAFB3A902022A /* Pods-HXHSwiftHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXHSwiftHub.release.xcconfig"; path = "Target Support Files/Pods-HXHSwiftHub/Pods-HXHSwiftHub.release.xcconfig"; sourceTree = "<group>"; };
 		770233132770993900284C07 /* HXHVoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHVoiceVC.swift; sourceTree = "<group>"; };
 		770233142770993900284C07 /* HXHVoiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHVoiceVC.xib; sourceTree = "<group>"; };
+		7724FA0227740C740067C0F9 /* HXHMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHMenuRouter.swift; sourceTree = "<group>"; };
+		7724FA0527740F130067C0F9 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		7728D2BD26F319FE00433C76 /* LinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
 		7728D2BF26F31A0D00433C76 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		77330CE127168CBC00B56D95 /* HXHNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHNumbers.swift; sourceTree = "<group>"; };
@@ -121,6 +125,22 @@
 				770233142770993900284C07 /* HXHVoiceVC.xib */,
 			);
 			path = Voice;
+			sourceTree = "<group>";
+		};
+		7724FA0127740C4C0067C0F9 /* MenuRouter */ = {
+			isa = PBXGroup;
+			children = (
+				7724FA0227740C740067C0F9 /* HXHMenuRouter.swift */,
+			);
+			path = MenuRouter;
+			sourceTree = "<group>";
+		};
+		7724FA0427740EF40067C0F9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7724FA0527740F130067C0F9 /* UIApplicationExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		7728D2BC26F319E200433C76 /* LinkedList */ = {
@@ -220,6 +240,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7724FA0127740C4C0067C0F9 /* MenuRouter */,
 				77023312277098DB00284C07 /* Voice */,
 				A62A6759274E901700356F37 /* Database */,
 				77461D9126E84D580074ADF9 /* DataStructure */,
@@ -255,6 +276,7 @@
 		77A50B6226AE62A5006F6E2D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7724FA0427740EF40067C0F9 /* Extension */,
 				77330CE027168CA600B56D95 /* Number */,
 				77E87CE226C7567300254E81 /* Base */,
 				77A50B6326AE62A5006F6E2D /* DB */,
@@ -457,6 +479,8 @@
 				77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */,
 				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,
 				7728D2C026F31A0D00433C76 /* LinkedList.swift in Sources */,
+				7724FA0627740F130067C0F9 /* UIApplicationExtension.swift in Sources */,
+				7724FA0327740C740067C0F9 /* HXHMenuRouter.swift in Sources */,
 				77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */,
 				770233152770993900284C07 /* HXHVoiceVC.swift in Sources */,
 				A6066CAE2732F63700583D3C /* HXHArrayVC.swift in Sources */,
