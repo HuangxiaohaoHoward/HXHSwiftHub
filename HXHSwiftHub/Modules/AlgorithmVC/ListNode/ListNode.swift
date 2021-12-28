@@ -18,7 +18,8 @@ class ListNode {
 //MARK: - algorithm
 class ListNodeAlgorithm {
 
-    /// 给定单链表的头节点 head ，请反转链表，并返回反转后的链表的头节点。
+    //MARK: - 给定单链表的头节点 head ，请反转链表，并返回反转后的链表的头节点。
+    /// 递归翻转单链表
     func reverseList(head: ListNode?) -> ListNode? {
         
         if head == nil || head?.next == nil {
@@ -29,4 +30,23 @@ class ListNodeAlgorithm {
         head?.next = nil
         return newHead
     }
+    ///非递归
+    func reverseList2(head: ListNode?) -> ListNode? {
+        
+        if head == nil || head?.next == nil {
+            return head
+        }
+        
+        var newHead: ListNode? = nil
+        var oldHead = head
+        while oldHead != nil {
+            let tmpNode = oldHead?.next
+            oldHead?.next = newHead
+            newHead = oldHead
+            oldHead = tmpNode
+        }
+        return newHead
+    }
+    
+    
 }

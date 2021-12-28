@@ -67,10 +67,10 @@ class AlgorithmVC: HXHBaseViewController {
     
     @IBAction func maxAreaAction(_ sender: UIButton) {
         let nums = [1,8,6,2,5,4,8,3,7]
-        manager.maxArea2(nums)
+        print(manager.maxArea2(nums))
     }
     @IBAction func reverseListNode(_ sender: UIButton) {
-        listNodeAlgorithmManager.reverseList(head: nil)
+        print(listNodeAlgorithmManager.reverseList(head: nil))
     }
     
 }
