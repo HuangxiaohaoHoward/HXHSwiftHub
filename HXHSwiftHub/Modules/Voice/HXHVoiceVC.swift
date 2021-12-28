@@ -75,7 +75,7 @@ class HXHVoiceVC: HXHBaseViewController, SFSpeechRecognizerDelegate, SFSpeechRec
     //MARK: - action
     
     @IBAction func openAction(_ sender: UIButton) {
-        let str = "truckerpath://message_QA?senderName=sss"
+        let str = "1234://message_QA?senderName=sss"
         guard let url = URL(string: str) else {
             print("url failure")
             return
