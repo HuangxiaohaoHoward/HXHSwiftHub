@@ -9,13 +9,16 @@
 import UIKit
 
 class AlgorithmVC: HXHBaseViewController {
+    //MARK: - var
     let manager = Algorithm()
+    let listNodeAlgorithmManager: ListNodeAlgorithm = ListNodeAlgorithm()
+    //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    //MARK: - action
+    //MARK: - actions
     
     @IBAction func twoNumSum(_ sender: UIButton) {
         let nums = [2,3,4,6,0,8,11]
@@ -65,6 +68,9 @@ class AlgorithmVC: HXHBaseViewController {
     @IBAction func maxAreaAction(_ sender: UIButton) {
         let nums = [1,8,6,2,5,4,8,3,7]
         manager.maxArea2(nums)
+    }
+    @IBAction func reverseListNode(_ sender: UIButton) {
+        listNodeAlgorithmManager.reverseList(head: nil)
     }
     
 }

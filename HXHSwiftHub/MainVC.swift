@@ -35,7 +35,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
                     .multiThread,
                     .TestModelPerformance,
                     .optionSet,
-                    .dataStructure,
                     .database,
                     .voice:
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
@@ -63,8 +62,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             testModelPerformance()
         case .optionSet:
             testOptionSet()
-        case .dataStructure:
-            gotoDataStructure()
         case .database:
             gotoDatabaseVC()
         case .voice:
@@ -81,10 +78,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let vc = HXHDatabaseVC()
         navigationController?.pushViewController(vc, animated: true)
     }
-    func gotoDataStructure() {
-        let vc = HXHDataStructureVC()
-        navigationController?.pushViewController(vc, animated: true)
-    }
+    
     func testOptionSet() {
         var opt: CellTypeOptions = [.detention]
         opt = opt.union(.fuel)
@@ -167,7 +161,6 @@ enum MainItem: String {
     case multiThread = "Multi Thread"
     case TestModelPerformance = "Test Model Performance"
     case optionSet = "OptionSet"
-    case dataStructure = "Data Structure"
     case database = "Database"
     case voice = "Voice"
 }
@@ -181,7 +174,6 @@ class MainVCManager {
                       .multiThread,
                       .TestModelPerformance,
                       .optionSet,
-                      .dataStructure,
                       .database,
                       .voice]
     }
