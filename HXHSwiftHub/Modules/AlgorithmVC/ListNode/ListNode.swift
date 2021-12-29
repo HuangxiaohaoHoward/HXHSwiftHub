@@ -6,7 +6,13 @@
 //
 
 import Foundation
-class ListNode {
+
+
+class ListNode: Equatable {
+    static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+        return (lhs.val == rhs.val) && (lhs.next == rhs.next)
+    }
+    
     var val: Int
     var next: ListNode?
     init(val: Int, next: ListNode?=nil) {
@@ -47,6 +53,39 @@ class ListNodeAlgorithm {
         }
         return newHead
     }
-    
+    //MARK: - 判断一个链表是否有环
+    /*
+     https://leetcode-cn.com/problems/linked-list-cycle/
+     */
+    /// 快慢指针法
+    func hasCycle(_ head: ListNode?) -> Bool {
+        if head == nil || head?.next == nil {
+            return false
+        }
+        var slow = head
+        var fast = head?.next
+        while (fast != nil && fast?.next != nil) {
+            if slow === fast {
+                return true
+            }
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+        return false
+    }
+    /// 快慢指针写法2
+    func hasCycle2(_ head: ListNode?) -> Bool {
+        var slow = head
+        var fast = head
+        
+        while (fast != nil && fast?.next != nil) {
+            slow = slow?.next
+            fast = fast?.next?.next
+            if slow === fast {
+                return true
+            }
+        }
+        return false
+    }
     
 }
