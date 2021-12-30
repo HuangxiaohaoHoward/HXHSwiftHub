@@ -1,5 +1,5 @@
-source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
-#source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 # Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
@@ -7,6 +7,7 @@ platform :ios, '12.0'
 target 'HXHSwiftHub' do
   use_frameworks!
   pod 'FMDB', '~> 2.7.0'
+  pod 'FMDB/FTS'
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
   pod 'YYKit', '1.0.9'

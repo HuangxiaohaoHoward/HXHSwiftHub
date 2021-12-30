@@ -14,8 +14,14 @@ class Student: NSObject {
     var stuID: Int?
     var name: String?
     var age: Int?
+    var score: Double?
+    var school: String?
 }
 
 class HXHDatabase {
+    
+    func setupFTS() {
+        
+    }
     
 }

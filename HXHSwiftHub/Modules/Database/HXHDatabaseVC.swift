@@ -41,11 +41,36 @@ class HXHDatabaseVC: HXHBaseViewController {
             print("db open failure")
             return
         }
+    
+        
         print("db open success")
-        let sql = "CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL);"
+        let sql = """
+        CREATE TABLE IF NOT EXISTS \(HXHDatabaseVC.tableName) (
+          stuID integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+          name text NOT NULL,
+          age integer,
+          score real,
+          school text,
+          sex integer(1) NOT NULL DEFAULT(1)
+        );
+        """
         do {
             let result = try db?.executeUpdate(sql, values: [])
             print("create table result: \(String(describing: result))")
+            
+            var simpleTokenizer = FMSimpleTokenizer(locale: nil)
+            db?.installTokenizerModule()
+            FMDatabase.registerTokenizer(simpleTokenizer, withKey: "simple")
+            
+            let tokenizerSQL = "CREATE VIRTUAL TABLE virtual_t_student USING fts3(name, age, score, school, tokenize=fmdb simple)"
+            guard let isTokenizerSUccess = db?.executeUpdate(tokenizerSQL, withArgumentsIn: []),
+                  isTokenizerSUccess == true else {
+                      print(db?.lastErrorMessage())
+                      return
+                  }
+            print("CREATE VIRTUAL TABLE virtual_t_student success")
+            db?.close()
+            
         } catch {
             print("create table fail : \(error)")
         }
@@ -53,20 +78,49 @@ class HXHDatabaseVC: HXHBaseViewController {
     @IBAction func addAction(_ sender: UIButton) {
         guard let nameStr = nameTF.text,
               let age = ageTF.text,
-        let age2 = Int(age) else {
-            return
-        }
+              let age2 = Int(age) else {
+                  return
+              }
         insert(name: nameStr, age: age2)
     }
     
     
     public func insert(name: String, age: Int) {
-        let sql = "insert into \(Self.tableName)(name,age) values ('\(name)',\(age))"
+        if db?.open() == true {
+            let sql = """
+                
+            
+            """
+            
+        } else {
+            print("open failure")
+        }
+        let sql = "insert or update into \(Self.tableName)(name,age) values ('\(name)',\(age))"
         do {
-         let result = try db?.executeUpdate(sql, withArgumentsIn: [])
+            let result = try db?.executeUpdate(sql, withArgumentsIn: [])
             print("insert result : \(String(describing: result))")
         } catch {
             print("insert error : \(error)")
+        }
+    }
+    func insert(key:String, val:Any) -> Bool {
+        if db?.open() == true {
+            let sql = """
+                insert or update into \(Self.tableName)
+                    (\(key))
+                    values(\(val))
+                );
+            """
+            
+            let result = try db?.executeUpdate(sql, withArgumentsIn: []) ?? false
+            print("insert result : \(String(describing: result))")
+               
+            return result
+
+        } else {
+            
+            print("open failure")
+            return false
         }
     }
 }
