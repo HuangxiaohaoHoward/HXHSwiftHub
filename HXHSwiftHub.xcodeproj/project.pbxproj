@@ -37,6 +37,7 @@
 		A62A675B274E903600356F37 /* HXHDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62A675A274E903600356F37 /* HXHDatabase.swift */; };
 		A62A675E274E907B00356F37 /* HXHDatabaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62A675C274E907B00356F37 /* HXHDatabaseVC.swift */; };
 		A62A675F274E907B00356F37 /* HXHDatabaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A675D274E907B00356F37 /* HXHDatabaseVC.xib */; };
+		A6EAC87C27959CA6005D09FF /* HXHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAC87B27959CA6005D09FF /* HXHStack.swift */; };
 		BDBA9A0A6DE36E613046603E /* Pods_HXHSwiftHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		A62A675A274E903600356F37 /* HXHDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDatabase.swift; sourceTree = "<group>"; };
 		A62A675C274E907B00356F37 /* HXHDatabaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDatabaseVC.swift; sourceTree = "<group>"; };
 		A62A675D274E907B00356F37 /* HXHDatabaseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHDatabaseVC.xib; sourceTree = "<group>"; };
+		A6EAC87B27959CA6005D09FF /* HXHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHStack.swift; sourceTree = "<group>"; };
 		AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXHSwiftHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -236,6 +238,7 @@
 		77A50B5926AE629A006F6E2D /* AlgorithmVC */ = {
 			isa = PBXGroup;
 			children = (
+				A6EAC87A27959C73005D09FF /* Stack */,
 				A600E0D5277A0FB7009E11B7 /* ListNode */,
 				77A50B5A26AE629A006F6E2D /* Algorithm.swift */,
 				77A50B5B26AE629A006F6E2D /* AlgorithmVC.xib */,
@@ -297,6 +300,14 @@
 				A62A675D274E907B00356F37 /* HXHDatabaseVC.xib */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		A6EAC87A27959C73005D09FF /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				A6EAC87B27959CA6005D09FF /* HXHStack.swift */,
+			);
+			path = Stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +447,7 @@
 				77A50B5F26AE629A006F6E2D /* Algorithm.swift in Sources */,
 				77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */,
 				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,
+				A6EAC87C27959CA6005D09FF /* HXHStack.swift in Sources */,
 				7724FA0627740F130067C0F9 /* UIApplicationExtension.swift in Sources */,
 				7724FA0327740C740067C0F9 /* HXHMenuRouter.swift in Sources */,
 				77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */,

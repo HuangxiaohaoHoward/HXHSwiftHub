@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// 单向链表
 class ListNode: Equatable {
     static func == (lhs: ListNode, rhs: ListNode) -> Bool {
         return (lhs.val == rhs.val) && (lhs.next == rhs.next)
@@ -21,6 +22,18 @@ class ListNode: Equatable {
     }
 }
 
+/// 双向链表
+class DoubleListNode {
+
+    var val: Int
+    var next: ListNode?
+    var prev: ListNode?
+    init(val: Int, next: ListNode?=nil, prev: ListNode?=nil) {
+        self.val = val
+        self.next = next
+        self.prev = prev
+    }
+}
 //MARK: - algorithm
 class ListNodeAlgorithm {
 
@@ -57,7 +70,7 @@ class ListNodeAlgorithm {
     /*
      https://leetcode-cn.com/problems/linked-list-cycle/
      */
-    /// 快慢指针法
+    /// 快慢指针法, 复杂度O(n)
     func hasCycle(_ head: ListNode?) -> Bool {
         if head == nil || head?.next == nil {
             return false
@@ -73,7 +86,7 @@ class ListNodeAlgorithm {
         }
         return false
     }
-    /// 快慢指针写法2
+    /// 快慢指针写法2, 复杂度O(n)
     func hasCycle2(_ head: ListNode?) -> Bool {
         var slow = head
         var fast = head
