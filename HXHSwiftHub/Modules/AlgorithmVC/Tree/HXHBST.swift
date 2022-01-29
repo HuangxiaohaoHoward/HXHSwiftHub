@@ -26,6 +26,7 @@ import Foundation
 
 class HXBinarySearchTree {
     
+    var rootNode: BTNode?
     var size: Int = 0
     var isEmpty: Bool {
         size == 0
@@ -35,24 +36,49 @@ class HXBinarySearchTree {
         
         /*
          疑问：
-         1. 相同值如何处理： 覆盖旧值，或者直接return
+         1. 相同值如何处理： 覆盖旧值，或者直接return，覆盖更合理
          2. compare方法的实现
         */
     }
     
-    class Node {
-        var val: Int
-        var left: Node?
-        var right: Node?
-        var parent: Node?
-        init(val: Int, left: Node?, right: Node?, parent: Node?) {
-            self.val = val
-            self.left = left
-            self.right = right
-            self.parent = parent
-            
+    
+    /// 前序遍历：根节点在前，先访问左子树。
+    func preorderTraversal() {
+        
+        // 方法1： 递归，递归的缺点是会栈溢出
+        preorderTraversal(rootNode)
+    }
+    func preorderTraversal(_ node: BTNode?) {
+        if nil == node {
+            return
         }
+        print(node?.val)
+        preorderTraversal(node?.left)
+        preorderTraversal(node?.right)
+    }
+    
+    func inorderTraversal() {
+        
+    }
+    func postorderTraversal() {
+        
+    }
+    func levelOrderTraversal() {
+        
     }
     
 }
 
+class BTNode {
+    var val: Int
+    var left: BTNode?
+    var right: BTNode?
+    var parent: BTNode?
+    init(val: Int, left: BTNode?, right: BTNode?, parent: BTNode?) {
+        self.val = val
+        self.left = left
+        self.right = right
+        self.parent = parent
+        
+    }
+}
