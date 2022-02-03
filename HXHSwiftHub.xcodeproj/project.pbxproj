@@ -34,6 +34,7 @@
 		77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */; };
 		77E87CE826C7579400254E81 /* HXHMultiThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */; };
 		A600E0D7277A0FD3009E11B7 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A600E0D6277A0FD3009E11B7 /* ListNode.swift */; };
+		A613891927ABB35A0018CE79 /* HXHSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A613891827ABB3590018CE79 /* HXHSet.swift */; };
 		A62A675B274E903600356F37 /* HXHDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62A675A274E903600356F37 /* HXHDatabase.swift */; };
 		A62A675E274E907B00356F37 /* HXHDatabaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62A675C274E907B00356F37 /* HXHDatabaseVC.swift */; };
 		A62A675F274E907B00356F37 /* HXHDatabaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A675D274E907B00356F37 /* HXHDatabaseVC.xib */; };
@@ -77,6 +78,7 @@
 		77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHMultiThreadVC.swift; sourceTree = "<group>"; };
 		77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHMultiThreadVC.xib; sourceTree = "<group>"; };
 		A600E0D6277A0FD3009E11B7 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		A613891827ABB3590018CE79 /* HXHSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHSet.swift; sourceTree = "<group>"; };
 		A62A675A274E903600356F37 /* HXHDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDatabase.swift; sourceTree = "<group>"; };
 		A62A675C274E907B00356F37 /* HXHDatabaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDatabaseVC.swift; sourceTree = "<group>"; };
 		A62A675D274E907B00356F37 /* HXHDatabaseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHDatabaseVC.xib; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		77A50B5926AE629A006F6E2D /* AlgorithmVC */ = {
 			isa = PBXGroup;
 			children = (
+				A613891727ABB3430018CE79 /* Set */,
 				A6AA82A4279B0C2000C68909 /* Tree */,
 				A6EAC87D2795B3B2005D09FF /* Queue */,
 				A6EAC87A27959C73005D09FF /* Stack */,
@@ -303,6 +306,14 @@
 				A600E0D6277A0FD3009E11B7 /* ListNode.swift */,
 			);
 			path = ListNode;
+			sourceTree = "<group>";
+		};
+		A613891727ABB3430018CE79 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				A613891827ABB3590018CE79 /* HXHSet.swift */,
+			);
+			path = Set;
 			sourceTree = "<group>";
 		};
 		A62A6759274E901700356F37 /* Database */ = {
@@ -485,6 +496,7 @@
 				776A09852711A00500332E60 /* HXHBaseNavigationController.swift in Sources */,
 				A600E0D7277A0FD3009E11B7 /* ListNode.swift in Sources */,
 				77A50B5D26AE629A006F6E2D /* TfBindBtnVC.swift in Sources */,
+				A613891927ABB35A0018CE79 /* HXHSet.swift in Sources */,
 				A62A675B274E903600356F37 /* HXHDatabase.swift in Sources */,
 				A6EAC87F2795B3C0005D09FF /* HXHQueue.swift in Sources */,
 				77A50B5F26AE629A006F6E2D /* Algorithm.swift in Sources */,
