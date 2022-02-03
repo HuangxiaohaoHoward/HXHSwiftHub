@@ -30,6 +30,39 @@ extension AppDelegate {
         let rootVC = HXHBaseNavigationController(rootViewController: MainVC())
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
+        
+        
+        print(class_getInstanceSize(NSObject.self))
+        
+        let queue = DispatchQueue(label: "forSizeTest")
+        let semphore = DispatchSemaphore(value: 0)
+        queue.async {
+            withUnsafeBytes(of: NSObject.self) { unsafeRawBufferPointer in
+                print("不带&")
+                for bute in unsafeRawBufferPointer {
+                    print(bute)
+                    print("malloc_size : \(malloc_size(unsafeRawBufferPointer.baseAddress))")
+                }
+                semphore.signal()
+            }
+            semphore.wait()
+            var object = NSObject.init()
+            withUnsafeBytes(of: &object) { unsafeRawBufferPointer in
+                print("带&")
+                for bute in unsafeRawBufferPointer {
+                    print(bute)
+                    print("malloc_size : \(malloc_size(unsafeRawBufferPointer.bindMemory(to: UInt8.self).baseAddress))")
+                }
+                semphore.signal()
+            }
+            semphore.wait()
+            print("HXHRuntimeTest")
+            let test = HXHRuntimeTest()
+            test.test()
+        }
+        
     }
 }
+
+
 
