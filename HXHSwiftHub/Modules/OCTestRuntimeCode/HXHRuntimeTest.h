@@ -15,4 +15,36 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface HXHPerson : NSObject
+{
+    @public
+    int _no;
+    int _age;
+//    int _age2;
+//    int _age3;
+//    int _age4;
+//    int _age5;
+}
+
+
+@end
+
+struct HXHStudent_IMPL {
+    Class isa;
+    int _no;
+    int _age;
+    int _sex;
+};
+
+@interface HXHStudent : HXHPerson
+{
+    @public
+    int _sex;
+}
+
+- (void)test;
+
+@end
+
+
 NS_ASSUME_NONNULL_END

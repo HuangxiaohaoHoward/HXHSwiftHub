@@ -19,5 +19,37 @@
     NSLog(@"%zd", class_getInstanceSize([NSObject class]));
     // 16
     NSLog(@"%zd", malloc_size((__bridge const void *)(obj)));
+    HXHPerson *per  = [[HXHPerson alloc] init];
+    per->_no = 3;
+    per->_age = 6;
+    
+    HXHStudent *stu  = [[HXHStudent alloc] init];
+    stu->_no = 2;
+    stu->_age = 8;
+    stu->_sex = 1;
+    [stu test];
+    
+    NSLog(@"per : %zu", malloc_size((__bridge const void *)(per)));
+    NSLog(@"stu : %zu", malloc_size((__bridge const void *)(stu)));
+    struct HXHStudent_IMPL *stuImpl = (__bridge struct HXHStudent_IMPL *)stu;
+    NSLog(@"\n--- _no: %d ---, --- _age : %d ---,  _sex : %d", stuImpl->_no, stuImpl->_age, stuImpl->_sex);
 }
+@end
+
+@implementation HXHPerson
+
+
+@end
+
+@implementation HXHStudent
+
+- (void)test {
+    NSLog(@"\n---- %@ ----\n---- %s ----\n", NSStringFromClass(self.class), __func__);
+    HXHStudent *std = [[HXHStudent alloc] init];
+    // 8
+    NSLog(@"\n---- %zd ----", class_getInstanceSize([HXHStudent class]));
+    // 16
+    NSLog(@"\n---- %zd ----", malloc_size((__bridge const void *)(std)));
+}
+
 @end
