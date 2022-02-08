@@ -135,6 +135,7 @@ extension TfBindBtnVC {
     /// 序列三部曲： 产生 -> 订阅 -> 发送信号
     func observableTrilogy() {
         // 1. 产生
+        // Class AnonymousObservable: Producer 保存闭包 SubscribeHandler
         let ob = Observable<Any>.create { obser -> Disposable in
             // 3. 发送信号
             obser.onNext("ob 1")
@@ -142,6 +143,7 @@ extension TfBindBtnVC {
             return Disposables.create()
         }
         // 2. 订阅
+        // ob为可观察序列 他的subscribe的内部有 AnonymousObserver.EventHandler 内部类，保存闭包，
         ob.subscribe { any in
             print("any : \(any)")
         } onError: { error in
@@ -154,6 +156,6 @@ extension TfBindBtnVC {
         .disposed(by: dispose)
         
         
-
+        
     }
 }
