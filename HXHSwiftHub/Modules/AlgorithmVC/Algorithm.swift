@@ -15,42 +15,42 @@ class Algorithm: NSObject {
     }
     /// 这个写法可以实现，但是会很麻烦，应该用下标控制，
     /// 返回下标，错误为-1. return subscript， error num is -1。
-//    func binarySearch()-> Int {
-//        var nums: [Int] = [-1,0,3,5,9,12]
-//        var result: Int = -1
-//        let target = 0
-//        let middleNum = nums.count/2
-//        let middle = nums[middleNum]
-//        if target == middle {
-//            return nums.firstIndex(of: target) ?? -1
-//        }
-//        if target < middle {
-//
-//        }
-//        return result
+    //    func binarySearch()-> Int {
+    //        var nums: [Int] = [-1,0,3,5,9,12]
+    //        var result: Int = -1
+    //        let target = 0
+    //        let middleNum = nums.count/2
+    //        let middle = nums[middleNum]
+    //        if target == middle {
+    //            return nums.firstIndex(of: target) ?? -1
+    //        }
+    //        if target < middle {
+    //
+    //        }
+    //        return result
     //    }
     //MARK: - 二分查找
     /*
      给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
-
+     
      示例 1:
-
+     
      输入: nums = [-1,0,3,5,9,12], target = 9
      输出: 4
      解释: 9 出现在 nums 中并且下标为 4
      示例 2:
-
+     
      输入: nums = [-1,0,3,5,9,12], target = 2
      输出: -1
      解释: 2 不存在 nums 中因此返回 -1
       
-
+     
      提示：
-
+     
      你可以假设 nums 中的所有元素是不重复的。
      n 将在 [1, 10000]之间。
      nums 的每个元素都将在 [-9999, 9999]之间。
-
+     
      */
     func binarySearch(_ nums: [Int], _ target: Int) -> Int {
         var start = 0
@@ -122,13 +122,13 @@ class Algorithm: NSObject {
         }
         return result
     }
-//MARK: - 盛最多水的容器
+    //MARK: - 盛最多水的容器
     /*
-    盛最多水的容器
-    
-    分解：
-    index的差和第二大的value的乘积最大
-    */
+     盛最多水的容器
+     
+     分解：
+     index的差和第二大的value的乘积最大
+     */
     /// 基础的暴力解法，会时间复杂度太差
     func maxArea(nums: [Int])-> Int {
         var area: Int = 0
@@ -140,14 +140,14 @@ class Algorithm: NSObject {
                 if tmpArea > area {
                     area = tmpArea
                     print("------ i : \(i) ; j : \(j) ; area : \(area)  ------")
-
+                    
                 }
             }
         }
         return area
     }
-
-
+    
+    
     /// 从最长的x轴开始计算。
     func maxArea2(_ height: [Int]) -> Int {
         var area: Int = 0
@@ -170,14 +170,14 @@ class Algorithm: NSObject {
     //MARK: - 第一个错误的版本
     /*
      你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开发的，所以错误的版本之后的所有版本都是错的。
-
+     
      假设你有 n 个版本 [1, 2, ..., n]，你想找出导致之后所有版本出错的第一个错误的版本。
-
+     
      你可以通过调用 bool isBadVersion(version) 接口来判断版本号 version 是否在单元测试中出错。实现一个函数来查找第一个错误的版本。你应该尽量减少对调用 API 的次数。
-
+     
       
      示例 1：
-
+     
      输入：n = 5, bad = 4
      输出：4
      解释：
@@ -186,19 +186,19 @@ class Algorithm: NSObject {
      调用 isBadVersion(4) -> true
      所以，4 是第一个错误的版本。
      示例 2：
-
+     
      输入：n = 1, bad = 1
      输出：1
       
-
+     
      提示：
-
+     
      1 <= bad <= n <= 231 - 1
      */
     func isBadVersion(_ version: Int) -> Bool{
         version >= 4
     }
-/// 二分法的变形
+    /// 二分法的变形
     func firstBadVersion(_ n: Int) -> Int {
         var left = 1
         var right = n
@@ -216,35 +216,35 @@ class Algorithm: NSObject {
     //MARK: - 搜索插入位置
     /*
      给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
-
+     
      请必须使用时间复杂度为 O(log n) 的算法。
-
+     
       
-
+     
      示例 1:
-
+     
      输入: nums = [1,3,5,6], target = 5
      输出: 2
      示例 2:
-
+     
      输入: nums = [1,3,5,6], target = 2
      输出: 1
      示例 3:
-
+     
      输入: nums = [1,3,5,6], target = 7
      输出: 4
      示例 4:
-
+     
      输入: nums = [1,3,5,6], target = 0
      输出: 0
      示例 5:
-
+     
      输入: nums = [1], target = 0
      输出: 0
       
-
+     
      提示:
-
+     
      1 <= nums.length <= 104
      -104 <= nums[i] <= 104
      nums 为无重复元素的升序排列数组
@@ -268,29 +268,29 @@ class Algorithm: NSObject {
     //MARK: - 977. 有序数组的平方
     /*
      https://leetcode-cn.com/problems/squares-of-a-sorted-array/
-
+     
      问题
-
+     
      给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。
-
+     
      示例 1：
-
+     
      输入：nums = [-4,-1,0,3,10]
      输出：[0,1,9,16,100]
      解释：平方后，数组变为 [16,1,0,9,100]
      排序后，数组变为 [0,1,9,16,100]
      示例 2：
-
+     
      输入：nums = [-7,-3,2,3,11]
      输出：[4,9,9,49,121]
      提示：
-
+     
      1 <= nums.length <= 104
      -104 <= nums[i] <= 104
      nums 已按 非递减顺序 排序
      
      进阶：
-
+     
      请你设计时间复杂度为 O(n) 的算法解决本问题
      */
     
@@ -376,6 +376,81 @@ class Algorithm: NSObject {
         }
         
         return result
+        
+    }
+    
+    //MARK: - 189. 轮转数组
+    /*
+     https://leetcode-cn.com/problems/rotate-array/
+     
+     问
+     
+     给你一个数组，将数组中的元素向右轮转 k 个位置，其中 k 是非负数。
+     
+     示例 1:
+     
+     输入: nums = [1,2,3,4,5,6,7], k = 3
+     输出: [5,6,7,1,2,3,4]
+     解释:
+     向右轮转 1 步: [7,1,2,3,4,5,6]
+     向右轮转 2 步: [6,7,1,2,3,4,5]
+     向右轮转 3 步: [5,6,7,1,2,3,4]
+     示例 2:
+     
+     输入：nums = [-1,-100,3,99], k = 2
+     输出：[3,99,-1,-100]
+     解释:
+     向右轮转 1 步: [99,-1,-100,3]
+     向右轮转 2 步: [3,99,-1,-100]
+     提示：
+     
+     1 <= nums.length <= 105
+     -231 <= nums[i] <= 231 - 1
+     0 <= k <= 105
+     
+     进阶：
+     
+     尽可能想出更多的解决方案，至少有 三种 不同的方法可以解决这个问题。
+     你可以使用空间复杂度为 O(1) 的原地算法解决这个问题吗？
+     */
+    func rotate(_ nums: inout [Int], _ k: Int) {
+        // 自己的尝试
+        if k == 0 {
+            return
+        }
+        var result = Array.init(repeating: -1, count: nums.count)
+        for (i, num) in nums.enumerated() {
+            result[(k + i) % (nums.count)] = num
+        }
+        nums = result
+        print(nums)
+    }
+    
+    func rotate2(_ nums: inout [Int], _ k: Int) {
+        // 题解都是3次翻转 ， 这个不容易想像，但如果画一下，还算比较容易明白。
+        let x = k % nums.count
+        reverse(nums: &nums, left: 0, right: nums.count-1)
+        print(1)
+        print(nums)
+        reverse(nums: &nums, left: 0, right: x-1)
+        print(2)
+        print(nums)
+        reverse(nums: &nums, left: x, right: nums.count-1)
+        print(3)
+        print(nums)
+    }
+
+    func reverse(nums: inout [Int], left: Int, right: Int) {
+        
+        var _left = left
+        var _right = right
+        while _left < _right {
+            let tmp = nums[_right]
+            nums[_right] = nums[_left]
+            nums[_left] = tmp
+            _left += 1
+            _right -= 1
+        }
         
     }
 }
