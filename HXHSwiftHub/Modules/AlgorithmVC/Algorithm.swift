@@ -265,4 +265,117 @@ class Algorithm: NSObject {
         }
         return right + 1
     }
+    //MARK: - 977. 有序数组的平方
+    /*
+     https://leetcode-cn.com/problems/squares-of-a-sorted-array/
+
+     问题
+
+     给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。
+
+     示例 1：
+
+     输入：nums = [-4,-1,0,3,10]
+     输出：[0,1,9,16,100]
+     解释：平方后，数组变为 [16,1,0,9,100]
+     排序后，数组变为 [0,1,9,16,100]
+     示例 2：
+
+     输入：nums = [-7,-3,2,3,11]
+     输出：[4,9,9,49,121]
+     提示：
+
+     1 <= nums.length <= 104
+     -104 <= nums[i] <= 104
+     nums 已按 非递减顺序 排序
+     
+     进阶：
+
+     请你设计时间复杂度为 O(n) 的算法解决本问题
+     */
+    
+    func sortedSquares1(_ nums: [Int]) -> [Int] {
+        /*
+         尝试1
+         思考：
+         第一步 平方； 第二步 排序
+         
+         执行用时：**480 ms**, 在所有 Swift 提交中击败了 **5.37%** 的用户
+         内存消耗：**15.3 MB**, 在所有 Swift 提交中击败了 **11.71%** 的用户
+         */
+        var result: [Int] = []
+        for num in nums {
+            let n = num * num
+            print(n)
+            if result.isEmpty {
+                result.append(n)
+            } else if result.count == 1 {
+                if n >= result[0] {
+                    result.append(n)
+                } else {
+                    result.insert(n, at: 0)
+                }
+            } else {
+                for i in 0..<(result.count) {
+                    if i == 0 {
+                        if n <= result[0] {
+                            result.insert(n, at: 0)
+                            break
+                        } else if n > result[0] && n < result[1] {
+                            result.insert(n, at: 1)
+                            break
+                        }
+                    } else if i == (result.count - 1) {
+                        if n >= result[i] {
+                            result.append(n)
+                            break
+                        } else if n < result[i] && n > result[i-1] {
+                            result.insert(n, at: i)
+                            break
+                        }
+                    } else {
+                        let left = result[i]
+                        let right = result[i+1]
+                        if n >= left && n <= right {
+                            result.insert(n, at: i+1)
+                            break
+                        }
+                    }
+                }
+            }
+        }
+        
+        return result
+    }
+    
+    func sortedSquares2(_ nums: [Int]) -> [Int] {
+        var result: [Int] = []
+        var left = 0
+        var right = nums.count - 1
+        var k = nums.count - 1
+        result = Array.init(repeating: -1, count: nums.count)
+        
+        while left <= right {
+            let lefts = nums[left] * nums[left]
+            let rights = nums[right] * nums[right]
+            print("lefts : \(lefts), rights : \(rights)")
+            print("k : \(k)")
+            if lefts < rights {
+                result[k] = rights
+                right -= 1
+                k -= 1
+            } else if lefts > rights {
+                result[k] = lefts
+                left += 1
+                k -= 1
+            } else {
+                result[k] = rights
+                right -= 1
+                k -= 1
+            }
+        }
+        
+        return result
+        
+    }
 }
