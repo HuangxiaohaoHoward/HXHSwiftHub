@@ -93,35 +93,6 @@ class Algorithm: NSObject {
     }
     
     
-    /*
-     已知一个整数数组 nums 和一个整数 target，取数组中任意两个值相加的和等 整数 target，返回这两个值在数组中的索引。
-     假设：
-     只有一个有效答案
-     同一个值不能重复取两次
-     可以按任意顺序返回答案
-     
-     示例 1
-     输入：nums = [2,7,11,15]，target = 9
-     输出：[0,1]
-     解释：因为 nums[0] + nums[1] == 9，所以返回 [0, 1]
-     示例 2
-     输入：nums = [3,2,4]，target = 6
-     输出：[1,2]
-     示例 3
-     输入：nums = [3,3]，target = 6
-     输出： [0,1]
-     */
-    func twoSum(nums: [Int], target: Int) -> [(Int, Int)] {
-        var dict = [Int:Int]()
-        var result = [(Int, Int)]()
-        for (idx, num) in nums.enumerated() {
-            if let lastIdx = dict[target - num] {
-                result.append((lastIdx, idx))
-            }
-            dict[num] = idx
-        }
-        return result
-    }
     //MARK: - 盛最多水的容器
     /*
      盛最多水的容器
@@ -510,6 +481,98 @@ class Algorithm: NSObject {
         print(nums)
     }
     
+    //MARK: - 167. 两数之和 II - 输入有序数组
+/*
+    给你一个下标从 1 开始的整数数组 numbers ，该数组已按 非递减顺序排列  ，请你从数组中找出满足相加之和等于目标数 target 的两个数。如果设这两个数分别是 numbers[index1] 和 numbers[index2] ，则 1 <= index1 < index2 <= numbers.length 。
+
+    以长度为 2 的整数数组 [index1, index2] 的形式返回这两个整数的下标 index1 和 index2。
+
+    你可以假设每个输入 只对应唯一的答案 ，而且你 不可以 重复使用相同的元素。
+
+    你所设计的解决方案必须只使用常量级的额外空间。
+
+    示例 1：
+
+    输入：numbers = [2,7,11,15], target = 9
+    输出：[1,2]
+    解释：2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。返回 [1, 2] 。
+    示例 2：
+
+    输入：numbers = [2,3,4], target = 6
+    输出：[1,3]
+    解释：2 与 4 之和等于目标数 6 。因此 index1 = 1, index2 = 3 。返回 [1, 3] 。
+    示例 3：
+
+    输入：numbers = [-1,0], target = -1
+    输出：[1,2]
+    解释：-1 与 0 之和等于目标数 -1 。因此 index1 = 1, index2 = 2 。返回 [1, 2] 。
+    提示：
+
+    2 <= numbers.length <= 3 * 104
+    -1000 <= numbers[i] <= 1000
+    numbers 按 非递减顺序 排列
+    -1000 <= target <= 1000
+    仅存在一个有效答案
+ */
+    func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
+        // 双指针
+        var left = 0
+        var right = numbers.count - 1
+        while left < right {
+            let lv = numbers[left]
+            let rv = numbers[right]
+            if target < (lv + rv) {
+                right -= 1
+            } else if target > (lv  + rv) {
+                left += 1
+            } else {
+                return [left+1, right+1]
+            }
+        }
+        return [-1]
+    }
     
+    func twoSum2(_ numbers: [Int], _ target: Int) -> [Int] {
+        // 哈希表
+        var map : [ Int : Int] = [:]
+        for (i, num) in numbers.enumerated() {
+            if let a = map[target - num] {
+                return [a+1, i+1]
+            } else {
+                map[num] = i
+            }
+        }
+        return [-1]
+    }
+    
+    /*
+     已知一个整数数组 nums 和一个整数 target，取数组中任意两个值相加的和等 整数 target，返回这两个值在数组中的索引。
+     假设：
+     只有一个有效答案
+     同一个值不能重复取两次
+     可以按任意顺序返回答案
+     
+     示例 1
+     输入：nums = [2,7,11,15]，target = 9
+     输出：[0,1]
+     解释：因为 nums[0] + nums[1] == 9，所以返回 [0, 1]
+     示例 2
+     输入：nums = [3,2,4]，target = 6
+     输出：[1,2]
+     示例 3
+     输入：nums = [3,3]，target = 6
+     输出： [0,1]
+     */
+    func twoSum(nums: [Int], target: Int) -> [(Int, Int)] {
+        var dict = [Int:Int]()
+        var result = [(Int, Int)]()
+        for (idx, num) in nums.enumerated() {
+            if let lastIdx = dict[target - num] {
+                result.append((lastIdx, idx))
+            }
+            dict[num] = idx
+        }
+        return result
+    }
     
 }
