@@ -36,7 +36,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
                     .TestModelPerformance,
                     .optionSet,
                     .database,
-                    .voice:
+                    .voice,
+                    .asyncLayer:
                 if let cell = table.dequeueReusableCell(withIdentifier: "cell") {
                     cell.textLabel?.text = item.rawValue
                     return cell
@@ -66,9 +67,15 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             gotoDatabaseVC()
         case .voice:
             gotoVoiceVC()
+        case .asyncLayer:
+            gotoAsyncLayer()
         }
     }
     //MARK: - action
+    private func gotoAsyncLayer() {
+        let vc = HXHAsyncLayerVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     private func gotoVoiceVC() {
         let vc = HXHVoiceVC()
         navigationController?.pushViewController(vc, animated: true)
@@ -163,19 +170,23 @@ enum MainItem: String {
     case optionSet = "OptionSet"
     case database = "Database"
     case voice = "Voice"
+    case asyncLayer = "Async Layer"
 }
 
 class MainVCManager {
     var tableItems: [MainItem]?
     func builder() {
-        tableItems = [.tfBindBtn,
-                      .algorithm,
-                      .loadHtml,
-                      .multiThread,
-                      .TestModelPerformance,
-                      .optionSet,
-                      .database,
-                      .voice]
+        tableItems = [
+            .tfBindBtn,
+            .algorithm,
+            .loadHtml,
+            .multiThread,
+            .TestModelPerformance,
+            .optionSet,
+            .database,
+            .voice,
+            .asyncLayer
+        ]
     }
 }
 

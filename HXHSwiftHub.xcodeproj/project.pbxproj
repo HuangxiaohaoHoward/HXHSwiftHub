@@ -33,6 +33,8 @@
 		77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */; };
 		77E87CE726C7579400254E81 /* HXHMultiThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */; };
 		77E87CE826C7579400254E81 /* HXHMultiThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */; };
+		77EDFF1127BA20AD00CB0B7D /* HXHAsyncLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EDFF0F27BA20AD00CB0B7D /* HXHAsyncLayerVC.swift */; };
+		77EDFF1227BA20AD00CB0B7D /* HXHAsyncLayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EDFF1027BA20AD00CB0B7D /* HXHAsyncLayerVC.xib */; };
 		A600E0D7277A0FD3009E11B7 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A600E0D6277A0FD3009E11B7 /* ListNode.swift */; };
 		A613891927ABB35A0018CE79 /* HXHSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A613891827ABB3590018CE79 /* HXHSet.swift */; };
 		A613891C27ABCD9E0018CE79 /* HXHMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A613891B27ABCD9E0018CE79 /* HXHMap.swift */; };
@@ -77,6 +79,8 @@
 		77E87CE326C7568C00254E81 /* HXHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHBaseViewController.swift; sourceTree = "<group>"; };
 		77E87CE526C7579400254E81 /* HXHMultiThreadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHMultiThreadVC.swift; sourceTree = "<group>"; };
 		77E87CE626C7579400254E81 /* HXHMultiThreadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHMultiThreadVC.xib; sourceTree = "<group>"; };
+		77EDFF0F27BA20AD00CB0B7D /* HXHAsyncLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHAsyncLayerVC.swift; sourceTree = "<group>"; };
+		77EDFF1027BA20AD00CB0B7D /* HXHAsyncLayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHAsyncLayerVC.xib; sourceTree = "<group>"; };
 		A600E0D6277A0FD3009E11B7 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		A613891827ABB3590018CE79 /* HXHSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHSet.swift; sourceTree = "<group>"; };
 		A613891B27ABCD9E0018CE79 /* HXHMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHMap.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				77EDFF0E27BA207200CB0B7D /* AsyncLayer */,
 				A668848F27AA685400487A0C /* OCTestRuntimeCode */,
 				7724FA0127740C4C0067C0F9 /* MenuRouter */,
 				77023312277098DB00284C07 /* Voice */,
@@ -300,6 +305,15 @@
 				776A09842711A00500332E60 /* HXHBaseNavigationController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		77EDFF0E27BA207200CB0B7D /* AsyncLayer */ = {
+			isa = PBXGroup;
+			children = (
+				77EDFF0F27BA20AD00CB0B7D /* HXHAsyncLayerVC.swift */,
+				77EDFF1027BA20AD00CB0B7D /* HXHAsyncLayerVC.xib */,
+			);
+			path = AsyncLayer;
 			sourceTree = "<group>";
 		};
 		A600E0D5277A0FB7009E11B7 /* ListNode */ = {
@@ -437,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EDFF1227BA20AD00CB0B7D /* HXHAsyncLayerVC.xib in Resources */,
 				A62A675F274E907B00356F37 /* HXHDatabaseVC.xib in Resources */,
 				77A50B6726AE62B4006F6E2D /* MainVC.xib in Resources */,
 				77A50B6026AE629A006F6E2D /* AlgorithmVC.xib in Resources */,
@@ -522,6 +537,7 @@
 				A62BCD4E279DAAC900CC9DC5 /* HXHBST.swift in Sources */,
 				A6EAC87C27959CA6005D09FF /* HXHStack.swift in Sources */,
 				7724FA0627740F130067C0F9 /* UIApplicationExtension.swift in Sources */,
+				77EDFF1127BA20AD00CB0B7D /* HXHAsyncLayerVC.swift in Sources */,
 				7724FA0327740C740067C0F9 /* HXHMenuRouter.swift in Sources */,
 				77A50B4226AE554F006F6E2D /* AppDelegate.swift in Sources */,
 				770233152770993900284C07 /* HXHVoiceVC.swift in Sources */,
