@@ -695,4 +695,54 @@ class Algorithm: NSObject {
         slow?.next = slow?.next?.next
         return dummyHead?.next
     }
+    
+    //MARK: - 3. 无重复字符的最长子串
+    
+    /*
+     3. 无重复字符的最长子串
+    
+     给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+
+     示例 1:
+
+     输入: s = "abcabcbb"
+     输出: 3
+     解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+     
+     示例 2:
+
+     输入: s = "bbbbb"
+     输出: 1
+     解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+     
+     示例 3:
+
+     输入: s = "pwwkew"
+     输出: 3
+     解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
+          请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
+      
+     */
+    func lengthOfLongestSubstring(_ s: String) -> Int {
+        // 可以按照题目要求输出 长度，也可以输出子串，看具体的要求是啥
+        // 核心是这种滑动窗口的思想
+        
+        var currentStr: String = ""
+        var maxStr = ""
+        var max = 0
+        for c in s {
+            if let idx = currentStr.firstIndex(of: c) {
+                let nextIdx = currentStr.index(idx, offsetBy: 1)
+                currentStr = String(currentStr[nextIdx...])
+            }
+            currentStr.append(c)
+            if currentStr.count > maxStr.count {
+                maxStr = currentStr
+                max = maxStr.count
+            }
+        }
+        print(max)
+        print(maxStr)
+        return max
+    }
 }
