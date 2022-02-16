@@ -43,6 +43,7 @@
 		A62A675F274E907B00356F37 /* HXHDatabaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A675D274E907B00356F37 /* HXHDatabaseVC.xib */; };
 		A62BCD4E279DAAC900CC9DC5 /* HXHBST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62BCD4D279DAAC900CC9DC5 /* HXHBST.swift */; };
 		A668849327AA689200487A0C /* HXHRuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A668849227AA689200487A0C /* HXHRuntimeTest.m */; };
+		A680364527BD57AE009CF64F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680364427BD57AE009CF64F /* StringExtension.swift */; };
 		A6EAC87C27959CA6005D09FF /* HXHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAC87B27959CA6005D09FF /* HXHStack.swift */; };
 		A6EAC87F2795B3C0005D09FF /* HXHQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAC87E2795B3C0005D09FF /* HXHQueue.swift */; };
 		BDBA9A0A6DE36E613046603E /* Pods_HXHSwiftHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */; };
@@ -91,6 +92,7 @@
 		A668849027AA689100487A0C /* HXHSwiftHub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HXHSwiftHub-Bridging-Header.h"; sourceTree = "<group>"; };
 		A668849127AA689200487A0C /* HXHRuntimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXHRuntimeTest.h; sourceTree = "<group>"; };
 		A668849227AA689200487A0C /* HXHRuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXHRuntimeTest.m; sourceTree = "<group>"; };
+		A680364427BD57AE009CF64F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A6EAC87B27959CA6005D09FF /* HXHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHStack.swift; sourceTree = "<group>"; };
 		A6EAC87E2795B3C0005D09FF /* HXHQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHQueue.swift; sourceTree = "<group>"; };
 		AABBC6905D252FF39BEEFBE5 /* Pods_HXHSwiftHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HXHSwiftHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				7724FA0527740F130067C0F9 /* UIApplicationExtension.swift */,
+				A680364427BD57AE009CF64F /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				778484E826D3AF0E0009977D /* TestModelPerformance.swift in Sources */,
 				7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */,
 				77A50B6126AE629A006F6E2D /* AlgorithmVC.swift in Sources */,
+				A680364527BD57AE009CF64F /* StringExtension.swift in Sources */,
 				77330CE227168CBC00B56D95 /* HXHNumbers.swift in Sources */,
 				77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */,
 				77E87CE426C7568D00254E81 /* HXHBaseViewController.swift in Sources */,

@@ -745,4 +745,73 @@ class Algorithm: NSObject {
         print(maxStr)
         return max
     }
+    
+    //MARK: - 567. 字符串的排列
+    /*
+     
+     
+     给你两个字符串 s1 和 s2 ，写一个函数来判断 s2 是否包含 s1 的排列。如果是，返回 true ；否则，返回 false 。
+
+     换句话说，s1 的排列之一是 s2 的 子串 。
+
+      
+
+     示例 1：
+
+     输入：s1 = "ab" s2 = "eidbaooo"
+     输出：true
+     解释：s2 包含 s1 的排列之一 ("ba").
+     示例 2：
+
+     输入：s1= "ab" s2 = "eidboaoo"
+     输出：false
+     */
+    func checkInclusion(_ s1: String, _ s2: String) -> Bool {
+        
+        var s1map = [Character : Int]()
+        var s2map = [Character : Int]()
+        for char in s1 {
+            s1map[char, default: 0] += 1
+        }
+        print(s1map)
+        
+        var right = s1.count
+        var left = 0
+        
+        var lastFirst: Character?
+        while right <= s2.count {
+            let curStr = String(s2[left..<right])
+            print(curStr)
+            if left == 0 {
+                for char in curStr {
+                    s2map[char, default: 0] += 1
+                }
+            } else {
+                if let last = curStr.last {
+                    s2map[last, default: 0] += 1
+                } else {
+                    
+                }
+            }
+            
+            
+            print(s2map)
+            if s1map == s2map {
+                return true
+            }
+            if let lastFirst = curStr.first {
+                if let a = s2map[lastFirst] {
+                    if a > 1 {
+                        s2map[lastFirst] = (a - 1)
+                    } else {
+                        s2map.removeValue(forKey: lastFirst)
+                    }
+                }
+            }
+            print(s2map)
+            left += 1
+            right += 1
+        }
+        return false
+    }
 }
