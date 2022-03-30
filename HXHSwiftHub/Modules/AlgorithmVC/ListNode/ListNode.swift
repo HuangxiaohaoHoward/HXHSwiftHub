@@ -68,13 +68,30 @@ class ListNodeAlgorithm {
         var newHead: ListNode? = nil
         var oldHead = head
         while oldHead != nil {
-            let tmpNode = oldHead?.next
-            oldHead?.next = newHead
-            newHead = oldHead
-            oldHead = tmpNode
+            let tmpNode = oldHead?.next  // 取出原链表的下次循环的头
+            oldHead?.next = newHead  // 将新的头加到新链表上
+            newHead = oldHead  // 将新的头赋值给newHead
+            oldHead = tmpNode  // 将下次循环的头赋值给oldHead
         }
         return newHead
     }
+    /// 非递归- 双指针思想 和2的区别在哪？
+    func reverseList3(_ head: ListNode?) -> ListNode? {
+        if head == nil || head?.next == nil {
+            return head
+        }
+        var pre: ListNode? = nil
+        var cur: ListNode? = head
+        var temp: ListNode? = nil
+        while cur != nil {
+            temp = cur?.next
+            cur?.next = pre
+            pre = cur
+            cur = temp
+        }
+        return pre
+    }
+
     //MARK: - 判断一个链表是否有环
     /*
      https://leetcode-cn.com/problems/linked-list-cycle/
