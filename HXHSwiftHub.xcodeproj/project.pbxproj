@@ -38,6 +38,11 @@
 		A600E0D7277A0FD3009E11B7 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A600E0D6277A0FD3009E11B7 /* ListNode.swift */; };
 		A613891927ABB35A0018CE79 /* HXHSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A613891827ABB3590018CE79 /* HXHSet.swift */; };
 		A613891C27ABCD9E0018CE79 /* HXHMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A613891B27ABCD9E0018CE79 /* HXHMap.swift */; };
+		A625DF5928B3DB1800CF3C7D /* HXHSyncTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625DF5828B3DB1800CF3C7D /* HXHSyncTableVC.swift */; };
+		A625DF5B28B3DB5C00CF3C7D /* HXHInCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625DF5A28B3DB5C00CF3C7D /* HXHInCellTableView.swift */; };
+		A625DF5D28B3DB8E00CF3C7D /* HXHBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625DF5C28B3DB8E00CF3C7D /* HXHBaseTableView.swift */; };
+		A625DF5F28B3DBBD00CF3C7D /* HXHScrollTableContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625DF5E28B3DBBD00CF3C7D /* HXHScrollTableContext.swift */; };
+		A625DF6128B3DF0C00CF3C7D /* HXHScrollSyncCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625DF6028B3DF0C00CF3C7D /* HXHScrollSyncCell.swift */; };
 		A62A675B274E903600356F37 /* HXHDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62A675A274E903600356F37 /* HXHDatabase.swift */; };
 		A62A675E274E907B00356F37 /* HXHDatabaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62A675C274E907B00356F37 /* HXHDatabaseVC.swift */; };
 		A62A675F274E907B00356F37 /* HXHDatabaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62A675D274E907B00356F37 /* HXHDatabaseVC.xib */; };
@@ -86,6 +91,11 @@
 		A600E0D6277A0FD3009E11B7 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		A613891827ABB3590018CE79 /* HXHSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHSet.swift; sourceTree = "<group>"; };
 		A613891B27ABCD9E0018CE79 /* HXHMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHMap.swift; sourceTree = "<group>"; };
+		A625DF5828B3DB1800CF3C7D /* HXHSyncTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHSyncTableVC.swift; sourceTree = "<group>"; };
+		A625DF5A28B3DB5C00CF3C7D /* HXHInCellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHInCellTableView.swift; sourceTree = "<group>"; };
+		A625DF5C28B3DB8E00CF3C7D /* HXHBaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHBaseTableView.swift; sourceTree = "<group>"; };
+		A625DF5E28B3DBBD00CF3C7D /* HXHScrollTableContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHScrollTableContext.swift; sourceTree = "<group>"; };
+		A625DF6028B3DF0C00CF3C7D /* HXHScrollSyncCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHScrollSyncCell.swift; sourceTree = "<group>"; };
 		A62A675A274E903600356F37 /* HXHDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDatabase.swift; sourceTree = "<group>"; };
 		A62A675C274E907B00356F37 /* HXHDatabaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXHDatabaseVC.swift; sourceTree = "<group>"; };
 		A62A675D274E907B00356F37 /* HXHDatabaseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HXHDatabaseVC.xib; sourceTree = "<group>"; };
@@ -234,6 +244,7 @@
 		77A50B5526AE629A006F6E2D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A625DF5728B3D9DC00CF3C7D /* UIDemo */,
 				77EDFF0E27BA207200CB0B7D /* AsyncLayer */,
 				A668848F27AA685400487A0C /* OCTestRuntimeCode */,
 				7724FA0127740C4C0067C0F9 /* MenuRouter */,
@@ -351,6 +362,18 @@
 			children = (
 			);
 			path = HashMap;
+			sourceTree = "<group>";
+		};
+		A625DF5728B3D9DC00CF3C7D /* UIDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A625DF5828B3DB1800CF3C7D /* HXHSyncTableVC.swift */,
+				A625DF5A28B3DB5C00CF3C7D /* HXHInCellTableView.swift */,
+				A625DF5C28B3DB8E00CF3C7D /* HXHBaseTableView.swift */,
+				A625DF5E28B3DBBD00CF3C7D /* HXHScrollTableContext.swift */,
+				A625DF6028B3DF0C00CF3C7D /* HXHScrollSyncCell.swift */,
+			);
+			path = UIDemo;
 			sourceTree = "<group>";
 		};
 		A62A6759274E901700356F37 /* Database */ = {
@@ -524,8 +547,11 @@
 				A62A675E274E907B00356F37 /* HXHDatabaseVC.swift in Sources */,
 				A613891C27ABCD9E0018CE79 /* HXHMap.swift in Sources */,
 				778484E826D3AF0E0009977D /* TestModelPerformance.swift in Sources */,
+				A625DF6128B3DF0C00CF3C7D /* HXHScrollSyncCell.swift in Sources */,
 				7747D2AE26CE04C400F4B734 /* HXHFMDBManager.swift in Sources */,
 				77A50B6126AE629A006F6E2D /* AlgorithmVC.swift in Sources */,
+				A625DF5B28B3DB5C00CF3C7D /* HXHInCellTableView.swift in Sources */,
+				A625DF5928B3DB1800CF3C7D /* HXHSyncTableVC.swift in Sources */,
 				A680364527BD57AE009CF64F /* StringExtension.swift in Sources */,
 				77330CE227168CBC00B56D95 /* HXHNumbers.swift in Sources */,
 				77A50B6626AE62B4006F6E2D /* MainVC.swift in Sources */,
@@ -533,6 +559,7 @@
 				A668849327AA689200487A0C /* HXHRuntimeTest.m in Sources */,
 				776A098227119AB300332E60 /* RxSwiftSearchVC.swift in Sources */,
 				776A09852711A00500332E60 /* HXHBaseNavigationController.swift in Sources */,
+				A625DF5D28B3DB8E00CF3C7D /* HXHBaseTableView.swift in Sources */,
 				A600E0D7277A0FD3009E11B7 /* ListNode.swift in Sources */,
 				77A50B5D26AE629A006F6E2D /* TfBindBtnVC.swift in Sources */,
 				A613891927ABB35A0018CE79 /* HXHSet.swift in Sources */,
@@ -544,6 +571,7 @@
 				77420FED26AFDC9B00BAE5E0 /* HXHLoadHtmlVC.swift in Sources */,
 				A62BCD4E279DAAC900CC9DC5 /* HXHBST.swift in Sources */,
 				A6EAC87C27959CA6005D09FF /* HXHStack.swift in Sources */,
+				A625DF5F28B3DBBD00CF3C7D /* HXHScrollTableContext.swift in Sources */,
 				7724FA0627740F130067C0F9 /* UIApplicationExtension.swift in Sources */,
 				77EDFF1127BA20AD00CB0B7D /* HXHAsyncLayerVC.swift in Sources */,
 				7724FA0327740C740067C0F9 /* HXHMenuRouter.swift in Sources */,
